@@ -1,13 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>the-webshop-template</title>
-  </head>
+    <title>Candy Avenue</title>
+    <link rel="stylesheet" href="style.css" />
+     </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+
+    <header>
+      <div class="header_box container">
+        <a href="#" class="logo">
+          <img src="/img/logotype.png" alt="Candy Avenue" />
+        </a>
+
+        <form id="searchForm">
+          <input type="text" placeholder="Search for goodies..." />
+        </form>
+
+        <div id="icon_box">
+          <span>♡</span>
+          <span>🛒</span>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#">New</a>
+        <a href="#">Popular</a>
+        <a href="#">Limited</a>
+        <a href="#">Chocolate</a>
+        <a href="#">Gummies</a>
+        <a href="#">Licorice</a>
+        <a href="#">More</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Classic Candy,<br />Sweet as Ever</h1>
+      <p>Timeless treats inspired by the 1950's</p>
+
+      <section>
+        <h2>Popular categories</h2>
+        <div id="category_btns">
+          <button>Classics</button>
+          <button>Chocolate</button>
+          <button>Gummies</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer_inner container">
+        <a href="#" class="logo">
+          <img src="/img/logotype.png" alt="Candy Avenue" />
+        </a>
+
+        <div class="footer_box">
+          <ul>
+            <li>About us</li>
+            <li>Brands</li>
+          </ul>
+
+          <ul>
+            <li>FAQ</li>
+            <li>Contact us</li>
+          </ul>
+
+          <ul>
+            <li>Terms & Conditions</li>
+            <li>Cookies</li>
+            <li>Privacy policy</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+<script type="module" src="/src/main.ts"></script>
   </body>
 </html>
