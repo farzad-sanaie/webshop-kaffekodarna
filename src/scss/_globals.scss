@@ -1,0 +1,142 @@
+// reset & box Sizing
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+// body
+
+body {
+  font-size: $font-s;
+  line-height: 1.6;
+  color: $color-primary-teal;
+  overflow-x: hidden;
+
+  @include breakpoint-up(large) {
+    font-size: $font-m;
+  }
+
+  &.noscroll {
+    overflow: hidden;
+  }
+}
+
+// headings
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+// paragraphs & links
+
+p {
+  @include text-style-body;
+  margin-bottom: 1.5rem;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: $color-accent-pink;
+}
+
+// spacing
+
+.container {
+  max-width: 69.375rem;
+  margin: 0 auto;
+
+  &--pall {
+    padding-top: 4.375rem;
+    padding-right: 1.5rem;
+    padding-bottom: 4.375rem;
+    padding-left: 1.5rem;
+
+    @include breakpoint-up(large) {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+  &--py {
+    padding-top: 4.375rem;
+    padding-bottom: 4.375rem;
+
+    @include breakpoint-up(large) {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+  &--px {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  &--pt {
+    padding-top: 4.375rem;
+
+    @include breakpoint-up(large) {
+      padding-top: 6rem;
+    }
+  }
+  &--pr {
+    padding-right: 1.5rem;
+  }
+  &--pb {
+    padding-bottom: 4.375rem;
+
+    @include breakpoint-up(large) {
+      padding-bottom: 6rem;
+    }
+  }
+  &--pl {
+    padding-left: 1.5rem;
+  }
+}
+
+// flexbox
+
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+// vsisibility
+
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
