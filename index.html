@@ -26,7 +26,7 @@
           <button class="icon_btn">
             <img src="/img/heart.png" alt="Favorites" />
           </button>
-          <button class="icon_btn">
+          <button id="cart" class="icon_btn">
             <img src="/img/cart.png" alt="Cart" />
           </button>
         </div>
@@ -34,7 +34,8 @@
 
       <nav>
         <ul class="nav_list">
-          <li><a href="new.html">New</a></li>
+          <li><a href="all.html">All</a></li>
+          <li><a href="#">New</a></li>
           <li><a href="#">Popular</a></li>
           <li><a href="#">Limited</a></li>
           <li><a href="#">Chocolate</a></li>
@@ -46,18 +47,53 @@
     </header>
 
     <main>
-      <h1>Classic Candy,<br />Sweet as Ever</h1>
-      <p>Timeless treats inspired by the 1950's</p>
+      <div class="hero">
+        <img src="/img/hero.png" alt="Classic Candy Sweet as Ever" />
+      </div>
 
       <section>
         <h2>Popular categories</h2>
         <div id="category_btns">
-          <button>Classics</button>
-          <button>Chocolate</button>
-          <button>Gummies</button>
+          <button class="category_btns">Classics</button>
+          <button class="category_btns">Chocolate</button>
+          <button class="category_btns">Gummies</button>
         </div>
       </section>
     </main>
+    <section class="new_arrivals">
+      <h2>New arrivals</h2>
+
+      <div class="products">
+        <article class="product_card">
+          <img src="/img/products/product1.png" alt="Popcorn Candy Sticks" />
+          <h3>Popcorn Candy Sticks</h3>
+          <p>
+            Traditional candy sticks with popcorn flavor. Sweet, crunchy and
+            nostalgic.
+          </p>
+          <button class="see_more_btn">See more</button>
+        </article>
+
+        <article class="product_card">
+          <img src="/img/products/product2.png" alt="Whoppers Theatre Pack" />
+          <h3>Whoppers Theatre Pack</h3>
+          <p>
+            Classic malted milk balls covered in chocolate. A movie night
+            favorite.
+          </p>
+         <button class="see_more_btn">See more</button>
+        </article>
+
+        <article class="product_card">
+          <img src="/img/products/product3.png" alt="Peanut’s Mint Patties" />
+          <h3>Peanut’s Mint Patties</h3>
+          <p>Refreshing mint patties with smooth chocolate coating.</p>
+          <button class="see_more_btn">See more</button>
+        </article>
+      </div>
+
+      <button class="view_all_btn">View all candy</button>
+    </section>
 
     <footer>
       <div class="footer_inner container">
