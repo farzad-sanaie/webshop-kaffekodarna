@@ -1,4 +1,0 @@
-import "./new.scss";
-
-
-
