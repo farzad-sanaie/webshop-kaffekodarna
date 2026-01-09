@@ -1,0 +1,32 @@
+// typography
+
+@mixin text-style-heading {
+  font-size: $font-xl;
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin text-style-subheading {
+  font-size: $font-l;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin text-style-body {
+  font-size: $font-s;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@mixin text-style-body-bold {
+  font-size: $font-s;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
