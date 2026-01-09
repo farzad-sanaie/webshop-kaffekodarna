@@ -13,13 +13,22 @@
           <img src="/img/logo.svg" alt="Candy Avenue" />
         </a>
 
-        <form id="searchForm">
-          <input type="text" placeholder="Search for goodies..." />
+        <form id="search_form">
+          <div class="search_wrapper">
+            <input type="text" placeholder="Search for goodies..." />
+            <button type="submit" class="search_btn">
+              <img src="/img/search.png" alt="Search" />
+            </button>
+          </div>
         </form>
 
         <div id="icon_box">
-          <span>♡</span>
-          <span>🛒</span>
+          <button class="icon_btn">
+            <img src="/img/heart.png" alt="Favorites" />
+          </button>
+          <button class="icon_btn">
+            <img src="/img/cart.png" alt="Cart" />
+          </button>
         </div>
       </div>
 
@@ -75,6 +84,7 @@
         </div>
       </div>
     </footer>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
