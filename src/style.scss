@@ -35,6 +35,7 @@ header {
   .logo {
     img {
       height: 42px;
+      display: block;
     }
   }
 }
@@ -57,26 +58,37 @@ header {
 
 nav {
   background: $secondary-color;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 0.7rem;
 
-  a {
-    color: $white;
-    text-decoration: none;
-    font-weight: bold;
+  .nav_list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    margin: 0;
+
+    li {
+      a {
+        color: $white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    }
   }
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   padding: 10rem 1rem;
 
   h1 {
     color: $primary-color;
-    font-size: 2.8rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
+    max-width: 520px;
   }
 
   p {
@@ -97,11 +109,12 @@ section {
   gap: 1.5rem;
 
   button {
+    width: 250px;
     background: $secondary-color;
-    border: none;
     color: $white;
-    padding: 0.9rem 2.4rem;
-    border-radius: 999px;
+    padding: 1rem 2.5rem;
+    border-radius: 10px;
+    border: none;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
@@ -112,25 +125,27 @@ footer {
   background: $primary-color;
   color: $white;
   padding: 4rem 0;
-  display: flex;
-
-  .logo {
-    img {
-      height: 78px;
-    }
-  }
 
   .footer_inner {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 4rem;
+    gap: 5rem;
+  }
+
+  .logo {
+    img {
+      height: 110px;
+      display: block;
+      border: 1px solid red;
+    }
   }
 
   .footer_box {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 4rem;
-    text-align: center;
+    text-align: left;
   }
 
   ul {
