@@ -179,3 +179,40 @@
     }
   }
 }
+
+#search_form {
+  display: flex;
+}
+
+.search_wrapper {
+  position: relative;
+  width: 450px;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem 2.5rem 0.5rem 1rem;
+  border-radius: 20px;
+  border: none;
+  background-color: $color-secondary-teal;
+
+  &::placeholder {
+    color: $color-background-cream;
+  }
+}
+
+.search_btn {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search_btn img {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
