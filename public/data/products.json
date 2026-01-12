@@ -10,7 +10,7 @@
       "weight": 50,
       "currency": "SEK",
       "isNew": false,
-      "image": ""
+      "image": "/img/products/licorice_twists.png"
     },
     {
       "id": "licorice-drops-sweet",
@@ -22,7 +22,7 @@
       "weight": 50,
       "currency": "SEK",
       "isNew": false,
-      "image": ""
+      "image": "/img/products/licorice_drops.png"
     },
     {
       "id": "licorice-sticks-filled",
@@ -34,7 +34,7 @@
       "weight": 50,
       "currency": "SEK",
       "isNew": false,
-      "image": ""
+      "image": "/img/products/filled_licorice_sticks.png"
     },
     {
       "id": "berry-bites-raspberry",
@@ -46,7 +46,7 @@
       "weight": 70,
       "currency": "SEK",
       "isNew": false,
-      "image": ""
+      "image": "/img/products/gummies_raspberry.png"
     },
     {
       "id": "berry-bites-blackberry",
@@ -58,7 +58,7 @@
       "weight": 70,
       "currency": "SEK",
       "isNew": false,
-      "image": ""
+      "image": "/img/products/gummies_blackberry.png"
     },
     {
       "id": "berry-bites-strawberry",
@@ -70,7 +70,7 @@
       "weight": 70,
       "currency": "SEK",
       "isNew": false,
-      "image": ""
+      "image": "/img/products/gummies_strawberry.png"
     },
     {
       "id": "lollipop-strawberry",
@@ -82,7 +82,7 @@
       "weight": 35,
       "currency": "SEK",
       "isNew": false,
-      "image": ""
+      "image": "/img/products/lollipop_strawberry.png"
     },
     {
       "id": "lollipop-blueberry",
@@ -94,7 +94,7 @@
       "weight": 35,
       "currency": "SEK",
       "isNew": false,
-      "image": ""
+      "image": "/img/products/lollipop_blueberry.png"
     },
     {
       "id": "lollipop-orange",
@@ -106,7 +106,7 @@
       "weight": 35,
       "currency": "SEK",
       "isNew": false,
-      "image": ""
+      "image": "/img/products/lollipop_orange.png"
     },
     {
       "id": "choco-bar-caramel",
@@ -118,7 +118,7 @@
       "weight": 70,
       "currency": "SEK",
       "isNew": true,
-      "image": ""
+      "image": "/img/products/choco_bar_caramel.png"
     },
     {
       "id": "choco-bar-mint",
@@ -130,7 +130,7 @@
       "weight": 70,
       "currency": "SEK",
       "isNew": true,
-      "image": ""
+      "image": "/img/products/choco_bar_mint.png"
     },
     {
       "id": "choco-bar-nougat",
@@ -142,7 +142,7 @@
       "weight": 70,
       "currency": "SEK",
       "isNew": true,
-      "image": ""
+      "image": "/img/products/choco_bar_nougat.png"
     }
   ]
 }
