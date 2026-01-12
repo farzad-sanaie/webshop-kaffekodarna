@@ -38,7 +38,7 @@
     },
     {
       "id": "berry-bites-raspberry",
-      "name": "Berry Bites - Raspberry",
+      "name": "Berry Bites",
       "category": "gummies",
       "variant": "Raspberry",
       "description": "Soft raspberry gummies with a delicate fruity flavor, chewy and sweet with a nostalgic taste. Each piece delivers the classic berry goodness that brings back memories of old-fashioned sweets.",
@@ -50,7 +50,7 @@
     },
     {
       "id": "berry-bites-blackberry",
-      "name": "Berry Bites - Blackberry",
+      "name": "Berry Bites",
       "category": "gummies",
       "variant": "Blackberry",
       "description": "Chewy blackberry gummies, rich in flavor and soft in texture. Each gummy captures the classic taste of ripe berries, reminiscent of timeless retro candy.",
@@ -62,7 +62,7 @@
     },
     {
       "id": "berry-bites-strawberry",
-      "name": "Berry Bites - Strawberry",
+      "name": "Berry Bites",
       "category": "gummies",
       "variant": "Strawberry",
       "description": "Sweet strawberry gummies, soft and chewy with a gentle fruity flavor. Each piece offers the nostalgic charm of traditional berry sweets, crafted for a simple indulgence.",
@@ -73,13 +73,37 @@
       "image": ""
     },
     {
-      "id": "",
-      "name": "",
-      "category": "",
-      "variant": "",
-      "description": "",
-      "price": 25,
-      "weight": 50,
+      "id": "lollipop-strawberry",
+      "name": "Twisties",
+      "category": "lollipop",
+      "variant": "Strawberry Twist",
+      "description": "Sweet strawberry lollipop with a chewy, flavorful center. Each piece delivers the classic taste of traditional fruit candy, perfect for enjoying a nostalgic candy moment.",
+      "price": 15,
+      "weight": 35,
+      "currency": "SEK",
+      "isNew": false,
+      "image": ""
+    },
+    {
+      "id": "lollipop-blueberry",
+      "name": "Twisties",
+      "category": "lollipop",
+      "variant": "Blueberry Blast",
+      "description": "Large blueberry lollipop, sweet and juicy with a soft, chewy center. Each lollipop captures the nostalgic taste of classic fruit candy, crafted for a timeless retro treat.",
+      "price": 15,
+      "weight": 35,
+      "currency": "SEK",
+      "isNew": false,
+      "image": ""
+    },
+    {
+      "id": "lollipop-orange",
+      "name": "Twisties",
+      "category": "lollipop",
+      "variant": "Orange Zing",
+      "description": "Zesty orange lollipop, soft and chewy with a bright, fruity flavor. Each lollipop offers the retro charm of old-fashioned fruit sweets.",
+      "price": 15,
+      "weight": 35,
       "currency": "SEK",
       "isNew": false,
       "image": ""
@@ -93,7 +117,7 @@
       "price": 25,
       "weight": 50,
       "currency": "SEK",
-      "isNew": false,
+      "isNew": true,
       "image": ""
     },
     {
@@ -105,7 +129,7 @@
       "price": 25,
       "weight": 50,
       "currency": "SEK",
-      "isNew": false,
+      "isNew": true,
       "image": ""
     },
     {
@@ -117,31 +141,7 @@
       "price": 25,
       "weight": 50,
       "currency": "SEK",
-      "isNew": false,
-      "image": ""
-    },
-    {
-      "id": "",
-      "name": "",
-      "category": "",
-      "variant": "",
-      "description": "",
-      "price": 25,
-      "weight": 50,
-      "currency": "SEK",
-      "isNew": false,
-      "image": ""
-    },
-    {
-      "id": "",
-      "name": "",
-      "category": "",
-      "variant": "",
-      "description": "",
-      "price": 25,
-      "weight": 50,
-      "currency": "SEK",
-      "isNew": false,
+      "isNew": true,
       "image": ""
     }
   ]
