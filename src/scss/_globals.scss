@@ -19,6 +19,7 @@ body {
   font-size: $font-s;
   line-height: 1.6;
   color: $color-primary-teal;
+  background-color: $color-background-cream;
   overflow-x: hidden;
 
   @include breakpoint-up(large) {
