@@ -90,7 +90,6 @@
 
   &__desktop {
     background: $color-primary-teal;
-    color: $color-primary-teal;
 
     .header_box {
       display: flex;
@@ -129,20 +128,34 @@
 
 .nav__desktop {
   background: $color-accent-pink;
-}
-.nav_list {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem;
-  margin: 0;
 
-  li {
-    a {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: bold;
+  .nav_list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    margin: 0;
+
+    li {
+      a {
+        color: $color-background-cream;
+        text-decoration: none;
+        font-weight: bold;
+        background-image: linear-gradient(
+          to bottom,
+          transparent 65%,
+          #e33f6d 0
+        );
+        background-size: 0% 100%;
+        background-repeat: no-repeat;
+        transition: background-size 0.4s ease;
+
+        &:hover {
+          background-size: 100% 100%;
+          cursor: pointer;
+        }
+      }
     }
   }
 }
