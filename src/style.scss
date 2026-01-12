@@ -163,42 +163,6 @@ section h2 {
     cursor: pointer;
   }
 }
-footer {
-  height: $header-footer-height;
-  background: $primary-color;
-  color: $white;
-  flex-shrink: 0;
-  display: flex;
-  padding-right: 10%;
-
-  .footer_inner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-  }
-
-  .logo img {
-    height: 110px;
-    display: block;
-  }
-
-  .footer_box {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4rem;
-    text-align: left;
-  }
-
-  ul {
-    list-style: none;
-  }
-
-  li {
-    margin-bottom: 1rem;
-    cursor: pointer;
-  }
-}
 
 .new_arrivals {
   padding: 2rem;
@@ -210,7 +174,18 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    padding-bottom: 2rem;
   }
+
+  .badger {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: #E33F6D;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
 
   .product_card {
     background: $white;
@@ -270,5 +245,42 @@ footer {
     border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
+  }
+}
+
+footer {
+  height: $header-footer-height;
+  background: $primary-color;
+  color: $white;
+  flex-shrink: 0;
+  display: flex;
+  padding-right: 10%;
+
+  .footer_inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .logo img {
+    height: 110px;
+    display: block;
+  }
+
+  .footer_box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    text-align: left;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    margin-bottom: 1rem;
+    cursor: pointer;
   }
 }
