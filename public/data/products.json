@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "id": "licorice-twists-salty",
+      "name": "Licorice Twists",
+      "category": "licorice",
+      "variant": "Salty",
+      "description": "Classic salty licorice twists, soft and chewy with a rich, slightly tangy flavor. Each twist is crafter to provide the perfect balance of traditional licorice taste and a gentle hint of saltiness. Perfect for those who enjoy nostalgic, old-fashioned sweets with a bold character. Ideal for a small treat or sharing with friends!",
+      "price": 22,
+      "weight": 50,
+      "currency": "SEK",
+      "isNew": false,
+      "image": ""
+    },
+    {
+      "id": "licorice-drops-sweet",
+      "name": "Licorice Drops",
+      "category": "licorice",
+      "variant": "Classic",
+      "description": "Classic licorice drops, soft and chewy with a rich, slightly sweet flavor. Each piece is crafted to deliver the timeless taste of traditional licorice, perfect for a nostalgic treat or sharing with friends. Ideal for those who love authentic old-fashioned sweets.",
+      "price": 22,
+      "weight": 50,
+      "currency": "SEK",
+      "isNew": false,
+      "image": ""
+    },
+    {
+      "id": "licorice-sticks-filled",
+      "name": "Filled Licorice Sticks",
+      "category": "licorice",
+      "variant": "Filled",
+      "description": "Salted licorice sticks with a sweet raspberry filling, soft and chewy with a rich, nostalgic flavor. Each stick blends the bold taste of traditional licorice with a fruity center for a simple, old-fashioned indulgence.",
+      "price": 25,
+      "weight": 50,
+      "currency": "SEK",
+      "isNew": false,
+      "image": ""
+    }
+  ]
+}
