@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import "./style.scss";
-=======
 import "./scss/style.scss";
 
 // hamburger slay
@@ -41,4 +38,3 @@ btnHamburger.addEventListener("click", (e) => {
     });
   }
 });
->>>>>>> feature-style-setup
