@@ -1,7 +1,35 @@
 @use "variables" as var;
 
+//paddings
+$p-sm: 0.5rem;
+$p-md: 1rem;
+$p-lg: 1.5rem;
+
+//margins
+$m-sm: 0.5rem;
+$m-md: 1rem;
+$m-lg: 1.5rem;
+
+//general sizing
+$s-xs: 0.25rem;
+$s-sm: 0.5rem;
+$s-md: 1rem;
+$s-lg: 1.5rem;
+$s-xl: 2rem;
+
+//border radius
+$br-btn: 4px;
+$br-card: 8px;
+
+//box shadow
+$box-shadow: 0 2px 4px #00000015;
+
+//colors
+$color-link: white;
+$color-card-bg: white;
+
 .shop-hero {
-    padding-top: 0.5rem;
+    padding-top: $p-sm;
 
     &__container {
         flex-direction: column;
@@ -9,13 +37,13 @@
         .categories {
             margin: 0;
             flex-direction: column;
-            gap: 0.25rem;
+            gap: $s-xs;
 
             &__link {
                 background-color: var.$color-accent-pink;
-                height: 2rem;
+                height: $s-xl;
                 width: 100%;
-                color: white;
+                color: $color-link;
                 font-size: var.$font-m;
                 text-align: center;
             }
@@ -25,14 +53,15 @@
 }
 
 .shop {
-    padding-top: 1rem;
+    padding-top: $p-md;
     flex-direction: column;
 
     .sort {
-        align-self: flex-end;
-
         display: inline-flex;
-        gap: 0.5rem;
+        align-self: flex-end;
+        gap: $s-sm;
+
+        padding-bottom: $p-md;
 
         background: none;
         border: none;
@@ -42,7 +71,7 @@
         text-transform: uppercase;
 
         &__img {
-            height: 1rem;
+            height: $s-md;
             width: auto;
         }
 
@@ -53,50 +82,73 @@
 
     &__items {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.5rem;
+        grid-template-columns: repeat(1, 1fr);
+        gap: $s-sm;
 
-        margin: auto 0.5rem;
+        margin: auto $m-sm;
     }
 }
 
 .card {
-    padding: 1rem;
+    padding: $p-lg;
     flex-direction: column;
 
-    background-color: white;
-    border-radius: 8px;
+    background-color: $color-card-bg;
+    border-radius: $br-card;
+
+    box-shadow: $box-shadow;
 
     &__img {
         max-width: 100%;
         background-color: var.$color-background-cream;
-        border-radius: 8px;
+        border-radius: $br-card;
     }
 
     &__title, &__price {
         margin: 0;
-        padding-top: 1rem;
+        padding-top: $p-md;
+    }
+
+    &__title {
+        font-size: var.$font-m;
     }
 
     &__price {
-        padding-bottom: 1rem;
+        padding-bottom: $p-md;
+        font-size: 24pt;
+        font-weight: 700;
     }
 
     &__btn {
+        flex: 1;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: $s-sm;
+
         background-color: var.$color-primary-teal;
         border: none;
-        border-radius: 8px;
+        border-radius: $br-btn;
+        height: $s-xl;
+
+        font-size: var.$font-s;
         color: var.$color-background-cream;
 
+        text-transform: uppercase;
+
         &-img {
-            height: 1rem;
+            height: $s-md;
         }
     }
 
-    .btn-container {
-        
+    &__favorite {
+        height: $s-xl;
     }
 
+    .btn-container {
+        width: 100%;
+        gap: $s-sm;
+    }
 }
 
 
