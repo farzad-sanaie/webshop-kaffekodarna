@@ -1,0 +1,36 @@
+@use "variables" as var;
+.shop-hero {
+
+}
+
+.shop {
+    flex-direction: column;
+    .sort {
+        align-self: flex-end;
+        
+        display: inline-flex;
+        gap: 0.5rem;
+
+        background: none;
+        border: none;
+        color: var.$color-primary-teal;
+        font-size: var.$font-m;
+
+        &__img {
+            height: 1rem;
+            width: auto;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__items {
+
+    }
+}
+
+.page-end {
+
+}
