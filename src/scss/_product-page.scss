@@ -35,7 +35,7 @@ $fw-md: 600;
 $fw-lg: 700;
 
 .shop-hero {
-  padding-top: $p-sm;
+  padding-top: $p-lg;
 
   &__intro {
     &-title {
@@ -195,7 +195,7 @@ $fw-lg: 700;
 }
 
 .page-end {
-  margin: $m-xxl;
+  margin: $m-xxl auto;
 
   flex-direction: column;
   &__title {
