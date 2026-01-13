@@ -25,7 +25,9 @@
 }
 
 .shop {
+    padding-top: 1rem;
     flex-direction: column;
+
     .sort {
         align-self: flex-end;
 
@@ -51,15 +53,52 @@
 
     &__items {
         display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
 
+        margin: auto 0.5rem;
     }
 }
 
 .card {
+    padding: 1rem;
+    flex-direction: column;
+
+    background-color: white;
+    border-radius: 8px;
+
     &__img {
         max-width: 100%;
+        background-color: var.$color-background-cream;
+        border-radius: 8px;
     }
+
+    &__title, &__price {
+        margin: 0;
+        padding-top: 1rem;
+    }
+
+    &__price {
+        padding-bottom: 1rem;
+    }
+
+    &__btn {
+        background-color: var.$color-primary-teal;
+        border: none;
+        border-radius: 8px;
+        color: var.$color-background-cream;
+
+        &-img {
+            height: 1rem;
+        }
+    }
+
+    .btn-container {
+        
+    }
+
 }
+
 
 .page-end {
 
