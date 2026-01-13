@@ -142,10 +142,18 @@ $fw-lg: 700;
         &-img {
             height: $s-md;
         }
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     &__favorite {
         height: $s-xl;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     .btn-container {
