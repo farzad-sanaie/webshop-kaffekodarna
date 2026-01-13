@@ -17,6 +17,7 @@ $s-sm: 0.5rem;
 $s-md: 1rem;
 $s-lg: 1.5rem;
 $s-xl: 2rem;
+$s-xxl: 2.5rem;
 
 //border radius
 $br-btn: 4px;
@@ -34,159 +35,189 @@ $fw-md: 600;
 $fw-lg: 700;
 
 .shop-hero {
-    padding-top: $p-sm;
+  padding-top: $p-sm;
 
-    &__container {
-        flex-direction: column;
-
-        .categories {
-            margin: 0;
-            flex-direction: column;
-            gap: $s-xs;
-
-            &__link {
-                background-color: var.$color-accent-pink;
-                height: $s-xl;
-                width: 100%;
-                color: $color-link;
-                font-size: var.$font-m;
-                text-align: center;
-            }
-        }
-
+  &__intro {
+    &-title {
+      color: var.$color-accent-pink;
     }
+  }
+
+  &__container {
+    flex-direction: column;
+
+    .categories {
+      margin: 0;
+      flex-direction: column;
+      gap: $s-xs;
+
+      @media screen and (min-width: 640px) {
+        margin: 0 $m-lg;
+        flex-direction: row;
+        gap: $s-lg;
+      }
+
+      &__link {
+        background-color: var.$color-accent-pink;
+        height: $s-xl;
+        width: 100%;
+        color: $color-link;
+        font-size: var.$font-m;
+        font-weight: $fw-md;
+        text-align: center;
+
+        @media screen and (min-width: 640px) {
+          height: $s-xxl;
+          border-radius: $br-btn;
+        }
+      }
+    }
+  }
 }
 
 .shop {
-    padding-top: $p-md;
-    flex-direction: column;
+  padding-top: $p-md;
+  flex-direction: column;
 
-    .sort {
-        display: inline-flex;
-        align-self: flex-end;
-        gap: $s-sm;
+  .sort {
+    display: inline-flex;
+    align-self: flex-end;
+    gap: $s-sm;
 
-        padding-bottom: $p-md;
+    padding-bottom: $p-md;
 
-        background: none;
-        border: none;
-        color: var.$color-primary-teal;
-        font-size: var.$font-m;
+    background: none;
+    border: none;
+    color: var.$color-primary-teal;
+    font-size: var.$font-m;
 
-        text-transform: uppercase;
+    text-transform: uppercase;
 
-        &__img {
-            height: $s-md;
-            width: auto;
-        }
-
-        &:hover {
-            cursor: pointer;
-        }
+    &__img {
+      height: $s-md;
+      width: auto;
     }
 
-    &__items {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: $s-sm;
+    &:hover {
+      cursor: pointer;
     }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: $s-sm;
+
+    @media screen and (min-width: 640px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $s-md;
+    }
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
 }
 
 .card {
-    padding: $p-lg;
-    flex-direction: column;
+  padding: $p-lg;
+  flex-direction: column;
 
-    background-color: $color-card-bg;
+  background-color: $color-card-bg;
+  border-radius: $br-card;
+
+  box-shadow: $box-shadow;
+
+  &__img {
+    max-width: 100%;
+    background-color: var.$color-background-cream;
     border-radius: $br-card;
+  }
 
-    box-shadow: $box-shadow;
+  &__title,
+  &__price {
+    margin: 0;
+    padding-top: $p-md;
+  }
 
-    &__img {
-        max-width: 100%;
-        background-color: var.$color-background-cream;
-        border-radius: $br-card;
+  &__title {
+    font-size: var.$font-m;
+  }
+
+  &__price {
+    padding-bottom: $p-md;
+    font-size: 24pt;
+    font-weight: $fw-lg;
+  }
+
+  &__btn {
+    flex: 1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: $s-sm;
+
+    background-color: var.$color-primary-teal;
+    border: none;
+    border-radius: $br-btn;
+    height: $s-xl;
+
+    font-size: var.$font-s;
+    color: var.$color-background-cream;
+
+    text-transform: uppercase;
+
+    &-img {
+      height: $s-md;
     }
 
-    &__title, &__price {
-        margin: 0;
-        padding-top: $p-md;
+    &:hover {
+      cursor: pointer;
     }
+  }
 
-    &__title {
-        font-size: var.$font-m;
+  &__favorite {
+    height: $s-xl;
+
+    &:hover {
+      cursor: pointer;
     }
+  }
 
-    &__price {
-        padding-bottom: $p-md;
-        font-size: 24pt;
-        font-weight: $fw-lg;
-    }
-
-    &__btn {
-        flex: 1;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        gap: $s-sm;
-
-        background-color: var.$color-primary-teal;
-        border: none;
-        border-radius: $br-btn;
-        height: $s-xl;
-
-        font-size: var.$font-s;
-        color: var.$color-background-cream;
-
-        text-transform: uppercase;
-
-        &-img {
-            height: $s-md;
-        }
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
-
-    &__favorite {
-        height: $s-xl;
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
-
-    .btn-container {
-        width: 100%;
-        gap: $s-sm;
-    }
+  .btn-container {
+    width: 100%;
+    gap: $s-sm;
+  }
 }
 
-
 .page-end {
-    margin: $m-xxl;
-    
-    flex-direction: column;
-    &__title {
-        text-align: center;
-        color: var.$color-accent-pink;
+  margin: $m-xxl;
+
+  flex-direction: column;
+  &__title {
+    text-align: center;
+    color: var.$color-accent-pink;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: $s-sm;
+
+    color: var.$color-primary-teal;
+    font-size: var.$font-m;
+    text-transform: uppercase;
+    font-weight: $fw-md;
+
+    &:visited {
+      color: var.$color-primary-teal;
     }
-
-    &__link {
-        display: inline-flex;
-        align-items: center;
-        gap: $s-sm;
-
-        color: var.$color-primary-teal;
-        font-size: var.$font-m;
-        text-transform: uppercase;
-        font-weight: $fw-md;
-
-        &:visited {
-            color: var.$color-primary-teal;
-        }
-        &-img {
-            height: $s-md;
-        }
+    &-img {
+      height: $s-md;
     }
+  }
 }
