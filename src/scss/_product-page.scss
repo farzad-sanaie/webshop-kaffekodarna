@@ -1,6 +1,27 @@
 @use "variables" as var;
-.shop-hero {
 
+.shop-hero {
+    padding-top: 0.5rem;
+
+    &__container {
+        flex-direction: column;
+
+        .categories {
+            margin: 0;
+            flex-direction: column;
+            gap: 0.25rem;
+
+            &__link {
+                background-color: var.$color-accent-pink;
+                height: 2rem;
+                width: 100%;
+                color: white;
+                font-size: var.$font-m;
+                text-align: center;
+            }
+        }
+
+    }
 }
 
 .shop {
@@ -29,7 +50,14 @@
     }
 
     &__items {
+        display: grid;
 
+    }
+}
+
+.card {
+    &__img {
+        max-width: 100%;
     }
 }
 
