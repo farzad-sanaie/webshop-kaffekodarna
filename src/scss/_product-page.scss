@@ -9,6 +9,7 @@ $p-lg: 1.5rem;
 $m-sm: 0.5rem;
 $m-md: 1rem;
 $m-lg: 1.5rem;
+$m-xxl: 4rem;
 
 //general sizing
 $s-xs: 0.25rem;
@@ -27,6 +28,10 @@ $box-shadow: 0 2px 4px #00000015;
 //colors
 $color-link: white;
 $color-card-bg: white;
+
+//font weights
+$fw-md: 600;
+$fw-lg: 700;
 
 .shop-hero {
     padding-top: $p-sm;
@@ -84,8 +89,6 @@ $color-card-bg: white;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: $s-sm;
-
-        margin: auto $m-sm;
     }
 }
 
@@ -116,7 +119,7 @@ $color-card-bg: white;
     &__price {
         padding-bottom: $p-md;
         font-size: 24pt;
-        font-weight: 700;
+        font-weight: $fw-lg;
     }
 
     &__btn {
@@ -153,5 +156,29 @@ $color-card-bg: white;
 
 
 .page-end {
+    margin: $m-xxl;
+    
+    flex-direction: column;
+    &__title {
+        text-align: center;
+        color: var.$color-accent-pink;
+    }
 
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        gap: $s-sm;
+
+        color: var.$color-primary-teal;
+        font-size: var.$font-m;
+        text-transform: uppercase;
+        font-weight: $fw-md;
+
+        &:visited {
+            color: var.$color-primary-teal;
+        }
+        &-img {
+            height: $s-md;
+        }
+    }
 }
