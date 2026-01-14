@@ -143,3 +143,16 @@ a:hover {
     display: none;
   }
 }
+
+.new {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: var.$color-accent-cherry;
+  padding: var.$new-p-vertical var.$new-p-horizontal;
+  font-size: var.$fs-xs;
+  font-family: var.$ff-body;
+  font-weight: var.$fw-lg;
+
+  text-transform: uppercase;
+}

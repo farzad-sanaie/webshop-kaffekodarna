@@ -17,7 +17,7 @@ export const renderProducts = (products: Product[]) => {
 
   products.forEach((product: Product) => {
     // create elements
-    const card = document.createElement("div");
+    const card = document.createElement("article");
     const cardImg = document.createElement("img");
     const cardTitle = document.createElement("h3");
     const cardPrice = document.createElement("p");
@@ -27,8 +27,10 @@ export const renderProducts = (products: Product[]) => {
     const btnImg = document.createElement("img");
     const favIcon = document.createElement("img");
 
+    
+
     // add classes to elements
-    card.className = "card flex flex-jc-c flex-ai-c";
+    card.className = "card flex flex-ai-c";
     cardImg.className = "card__img";
     cardTitle.className = "card__title";
     cardPrice.className = "card__price";
@@ -59,10 +61,22 @@ export const renderProducts = (products: Product[]) => {
     favIcon.alt = "Favorite icon";
 
     // append elements
+
+    
+
     btn.appendChild(btnImg);
     btnContainer.append(btn, favIcon);
 
     card.append(cardImg, cardTitle, cardPrice, btnContainer);
+    
+    let newSpan;
+
+    if(product.isNew === true) {
+      newSpan = document.createElement("span");
+      newSpan.className = "new";
+      newSpan.textContent = "New";
+      card.append(newSpan);
+    }
 
     grid.append(card);
   });

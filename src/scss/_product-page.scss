@@ -106,6 +106,8 @@
 }
 
 .card {
+  position: relative;
+  
   padding: var.$p-lg;
   flex-direction: column;
 
