@@ -50,11 +50,18 @@ const init = async () => {
   const newParam = params.get("isNew");
 
   const isNew = newParam === "true";
+  
+  const pageTitle = document.getElementById("product-page-title") as HTMLHeadingElement;
 
   let filteredProducts: Product[] = products;
 
   if(categoryParam !== null) {
     filteredProducts = products.filter((p: Product) => p.category === categoryParam);
+
+    if(pageTitle) {
+      pageTitle.textContent = categoryParam.charAt(0).toUpperCase() + categoryParam.slice(1);
+    }
+    
   } else {
     filteredProducts = products;
   }

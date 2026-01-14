@@ -75,7 +75,7 @@
     {
       "id": "lollipop-strawberry",
       "name": "Twisties",
-      "category": "lollipop",
+      "category": "lollipops",
       "variant": "Strawberry Twist",
       "description": "Sweet strawberry lollipop with a chewy, flavorful center. Each piece delivers the classic taste of traditional fruit candy, perfect for enjoying a nostalgic candy moment.",
       "price": 15,
@@ -87,7 +87,7 @@
     {
       "id": "lollipop-blueberry",
       "name": "Twisties",
-      "category": "lollipop",
+      "category": "lollipops",
       "variant": "Blueberry Blast",
       "description": "Large blueberry lollipop, sweet and juicy with a soft, chewy center. Each lollipop captures the nostalgic taste of classic fruit candy, crafted for a timeless retro treat.",
       "price": 15,
@@ -99,7 +99,7 @@
     {
       "id": "lollipop-orange",
       "name": "Twisties",
-      "category": "lollipop",
+      "category": "lollipops",
       "variant": "Orange Zing",
       "description": "Zesty orange lollipop, soft and chewy with a bright, fruity flavor. Each lollipop offers the retro charm of old-fashioned fruit sweets.",
       "price": 15,
