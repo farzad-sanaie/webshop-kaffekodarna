@@ -1,0 +1,142 @@
+@use "variables" as var;
+@use "mixins" as m;
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+
+  .hero {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-width: 350px;
+    }
+  }
+  p {
+    margin-bottom: 6rem;
+  }
+}
+
+section h2 {
+  color: var.$color-primary-teal;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+#category_btns {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-direction: column;
+
+  @include m.breakpoint-up(large) {
+    flex-direction: row;
+  }
+
+  .category_btns {
+    width: 250px;
+    background: var.$color-accent-pink;
+    color: #fff;
+    padding: 1rem 2.5rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+.new_arrivals {
+  padding: 2rem;
+  text-align: center;
+
+  .products {
+    max-width: 1100px;
+    margin: 0 auto 1rem;
+
+    flex-direction: column;
+
+    @include m.breakpoint-up(large) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+  }
+
+  .badger {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: #e33f6d;
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .product_card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1rem 0 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #d7ccbe;
+    margin-bottom: 2rem;
+
+    .product_info {
+      background: #77c0d4;
+      color: #fff;
+      width: 100%;
+      padding: 1rem;
+      border-radius: 0 0 10px 10px;
+
+      p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        color: black;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 160px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      color: var.$color-primary-teal;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .see_more_btn {
+      margin-top: 1rem;
+      background: var.$color-accent-pink;
+      color: #ffff;
+      border: none;
+      border-radius: 10px;
+      padding: 1rem 1.5rem;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+
+  .view_all_btn {
+    background: var.$color-primary-teal;
+    color: #fff;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}
