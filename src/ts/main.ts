@@ -1,4 +1,5 @@
-import "./scss/style.scss";
+import "../scss/style.scss";
+import { loadProducts, renderProducts } from "./components/ProductCard";
 
 // hamburger slay
 
@@ -38,3 +39,11 @@ btnHamburger.addEventListener("click", (e) => {
     });
   }
 });
+
+// initialize products
+const init = async () => {
+  const products = await loadProducts();
+  renderProducts(products);
+};
+
+init();
