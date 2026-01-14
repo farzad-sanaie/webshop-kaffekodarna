@@ -1,34 +1,60 @@
-// text styles
 @use "variables" as var;
 @use "sass:map";
 
-
-@mixin text-style-heading {
-  font-size: var.$font-xl;
-  font-family: "Lobster Two", sans-serif;
-  font-weight: 400;
+// text styles
+@mixin font-settings{
+  font-optical-sizing: auto;
   font-style: normal;
 }
 
+@mixin text-style-special {
+  font-size: var.$fs-lg;
+  font-family: var.$ff-special;
+  font-weight: 400;
+  @include font-settings();
+}
+
+@mixin text-style-heading {
+  font-size: var.$fs-xl;
+  font-family: var.$ff-h1;
+  font-weight: 400;
+  @include font-settings();
+}
+
+// general style for all subheadings
 @mixin text-style-subheading {
-  font-size: var.$font-l;
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
+  font-family: var.$ff-heading;
   font-weight: 700;
-  font-style: normal;
+  @include font-settings();
+}
+
+// text styles for different headings
+@mixin text-style-subheading-lg {
+  font-size: var.$fs-lg;
+  @include text-style-subheading();
+}
+
+@mixin text-style-subheading-md {
+  font-size: var.$fs-md;
+  @include text-style-subheading();
+}
+
+@mixin text-style-subheading-sm {
+  font-size: var.$fs-md;
+  @include text-style-subheading();
 }
 
 @mixin text-style-body {
-  font-size: var.$font-s;
-  font-family: "Inter", sans-serif;
+  font-size: var.$fs-sm;
+  font-family: var.$ff-body;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
 }
 
 @mixin text-style-body-bold {
-  font-size: var.$font-s;
-  font-family: "Inter", sans-serif;
+  font-size: var.$fs-sm;
+  font-family: var.$ff-body;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
