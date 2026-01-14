@@ -113,6 +113,12 @@
   border-radius: var.$br-card;
 
   box-shadow: var.$box-shadow-card;
+  transition: transform 0.2s ease-in;
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-0.25rem);
+  }
 
   &__img {
     max-width: 100%;
