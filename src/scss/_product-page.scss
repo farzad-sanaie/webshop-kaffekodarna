@@ -157,8 +157,9 @@
 
     font-size: var.$fs-body-sm;
     color: var.$color-background-cream;
-
     text-transform: uppercase;
+
+    transition: background-color 0.4s ease;
 
     &-img {
       height: var.$s-md;
@@ -166,6 +167,7 @@
 
     &:hover {
       cursor: pointer;
+      background-color: var.$color-accent-pink;
     }
   }
 
