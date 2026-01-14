@@ -45,7 +45,6 @@
 }
 
 @mixin text-style-body {
-  font-size: var.$fs-sm;
   font-family: var.$ff-body;
   font-optical-sizing: auto;
   font-weight: 300;

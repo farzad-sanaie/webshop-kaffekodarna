@@ -1,45 +1,14 @@
 @use "variables" as var;
-
-//paddings
-$p-sm: 0.5rem;
-$p-md: 1rem;
-$p-lg: 1.5rem;
-
-//margins
-$m-sm: 0.5rem;
-$m-md: 1rem;
-$m-lg: 1.5rem;
-$m-xxl: 4rem;
-
-//general sizing
-$s-xs: 0.25rem;
-$s-sm: 0.5rem;
-$s-md: 1rem;
-$s-lg: 1.5rem;
-$s-xl: 2rem;
-$s-xxl: 2.5rem;
-
-//border radius
-$br-btn: 4px;
-$br-card: 8px;
-
-//box shadow
-$box-shadow: 0 2px 4px #00000015;
-
-//colors
-$color-link: white;
-$color-card-bg: white;
-
-//font weights
-$fw-md: 600;
-$fw-lg: 700;
+@use "mixins" as m;
 
 .shop-hero {
-  padding-top: $p-lg;
+  padding-top: var.$p-lg;
+  text-align: left;
 
   &__intro {
     &-title {
       color: var.$color-accent-pink;
+      @include m.text-style-heading();
     }
   }
 
@@ -49,26 +18,26 @@ $fw-lg: 700;
     .categories {
       margin: 0;
       flex-direction: column;
-      gap: $s-xs;
+      gap: var.$s-xs;
 
       @media screen and (min-width: 640px) {
-        margin: 0 $m-lg;
+        margin: 0 var.$m-lg;
         flex-direction: row;
-        gap: $s-lg;
+        gap: var.$s-lg;
       }
 
       &__link {
         background-color: var.$color-accent-pink;
-        height: $s-xl;
+        height: var.$s-xl;
         width: 100%;
-        color: $color-link;
-        font-size: var.$font-m;
-        font-weight: $fw-md;
+        color: var.$color-white;
+        font-size: var.$fs-body-lg;
+        font-weight: var.$fw-md;
         text-align: center;
 
         @media screen and (min-width: 640px) {
-          height: $s-xxl;
-          border-radius: $br-btn;
+          height: var.$s-xxl;
+          border-radius: var.$br-btn;
         }
       }
     }
@@ -76,25 +45,25 @@ $fw-lg: 700;
 }
 
 .shop {
-  padding-top: $p-md;
+  padding-top: var.$p-md;
   flex-direction: column;
 
   .sort {
     display: inline-flex;
     align-self: flex-end;
-    gap: $s-sm;
+    gap: var.$s-sm;
 
-    padding-bottom: $p-md;
+    padding-bottom: var.$p-md;
 
     background: none;
     border: none;
     color: var.$color-primary-teal;
-    font-size: var.$font-m;
+    font-size: var.$fs-body-lg;
 
     text-transform: uppercase;
 
     &__img {
-      height: $s-md;
+      height: var.$s-md;
       width: auto;
     }
 
@@ -106,11 +75,11 @@ $fw-lg: 700;
   &__items {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: $s-sm;
+    gap: var.$s-sm;
 
     @media screen and (min-width: 640px) {
       grid-template-columns: repeat(2, 1fr);
-      gap: $s-md;
+      gap: var.$s-md;
     }
 
     @media screen and (min-width: 768px) {
@@ -124,34 +93,34 @@ $fw-lg: 700;
 }
 
 .card {
-  padding: $p-lg;
+  padding: var.$p-lg;
   flex-direction: column;
 
-  background-color: $color-card-bg;
-  border-radius: $br-card;
+  background-color: var.$color-white;
+  border-radius: var.$br-card;
 
-  box-shadow: $box-shadow;
+  box-shadow: var.$box-shadow-card;
 
   &__img {
     max-width: 100%;
     background-color: var.$color-background-cream;
-    border-radius: $br-card;
+    border-radius: var.$br-card;
   }
 
   &__title,
   &__price {
     margin: 0;
-    padding-top: $p-md;
+    padding-top: var.$p-md;
   }
 
   &__title {
-    font-size: var.$font-m;
+    font-size: var.$fs-body-lg;
   }
 
   &__price {
-    padding-bottom: $p-md;
+    padding-bottom: var.$p-md;
     font-size: 24pt;
-    font-weight: $fw-lg;
+    font-weight: var.$fw-lg;
   }
 
   &__btn {
@@ -159,20 +128,20 @@ $fw-lg: 700;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    gap: $s-sm;
+    gap: var.$s-sm;
 
     background-color: var.$color-primary-teal;
     border: none;
-    border-radius: $br-btn;
-    height: $s-xl;
+    border-radius: var.$br-btn;
+    height: var.$s-xl;
 
-    font-size: var.$font-s;
+    font-size: var.$fs-body-sm;
     color: var.$color-background-cream;
 
     text-transform: uppercase;
 
     &-img {
-      height: $s-md;
+      height: var.$s-md;
     }
 
     &:hover {
@@ -181,7 +150,7 @@ $fw-lg: 700;
   }
 
   &__favorite {
-    height: $s-xl;
+    height: var.$s-xl;
 
     &:hover {
       cursor: pointer;
@@ -190,12 +159,12 @@ $fw-lg: 700;
 
   .btn-container {
     width: 100%;
-    gap: $s-sm;
+    gap: var.$s-sm;
   }
 }
 
 .page-end {
-  margin: $m-xxl auto;
+  margin: var.$m-xxl auto;
 
   flex-direction: column;
   &__title {
@@ -206,18 +175,18 @@ $fw-lg: 700;
   &__link {
     display: inline-flex;
     align-items: center;
-    gap: $s-sm;
+    gap: var.$s-sm;
 
     color: var.$color-primary-teal;
-    font-size: var.$font-m;
+    font-size: var.$fs-body-lg;
     text-transform: uppercase;
-    font-weight: $fw-md;
+    font-weight: var.$fw-md;
 
     &:visited {
       color: var.$color-primary-teal;
     }
     &-img {
-      height: $s-md;
+      height: var.$s-md;
     }
   }
 }
