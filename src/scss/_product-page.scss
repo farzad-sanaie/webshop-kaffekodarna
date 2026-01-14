@@ -59,7 +59,6 @@
 
 .shop {
   flex-direction: column;
-  padding-top: var.$p-lg;
 
   .sort {
     display: inline-flex;
@@ -107,7 +106,7 @@
 
 .card {
   position: relative;
-  
+
   padding: var.$p-lg;
   flex-direction: column;
 
@@ -120,6 +119,12 @@
   &:hover {
     cursor: pointer;
     transform: translateY(-0.25rem);
+  }
+
+  .detail-container {
+    width: 100%;
+    flex-direction: column;
+    flex: 1;
   }
 
   &__img {
@@ -182,6 +187,7 @@
   }
 
   .btn-container {
+    flex-direction: row;
     width: 100%;
     gap: var.$s-sm;
   }

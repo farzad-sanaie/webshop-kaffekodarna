@@ -33,7 +33,7 @@
       "price": 25,
       "weight": 50,
       "currency": "SEK",
-      "isNew": false,
+      "isNew": true,
       "image": "/img/products/filled_licorice_sticks.png"
     },
     {
@@ -129,7 +129,7 @@
       "price": 20,
       "weight": 70,
       "currency": "SEK",
-      "isNew": true,
+      "isNew": false,
       "image": "/img/products/choco_bar_mint.png"
     },
     {

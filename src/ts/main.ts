@@ -1,5 +1,6 @@
 import "../scss/style.scss";
 import { loadProducts, renderProducts } from "./components/ProductCard";
+import type { Product } from "./models/Product";
 
 // hamburger slay
 
@@ -43,7 +44,38 @@ btnHamburger.addEventListener("click", (e) => {
 // initialize products
 const init = async () => {
   const products = await loadProducts();
-  renderProducts(products);
+
+  const params = new URLSearchParams(window.location.search);
+  const categoryParam = params.get("category");
+  const newParam = params.get("isNew");
+
+  const isNew = newParam === "true";
+
+  let filteredProducts: Product[] = products;
+
+  if(categoryParam !== null) {
+    filteredProducts = products.filter((p: Product) => p.category === categoryParam);
+  } else {
+    filteredProducts = products;
+  }
+
+  if(isNew) {
+    filteredProducts = products.filter((p: Product) => p.isNew === isNew);
+  }
+
+  const sortedProducts = filteredProducts.sort((a: Product, b: Product) => {
+    if(a.isNew && !b.isNew) {
+      return -1; // a is before b
+    }
+
+    if(!a.isNew && b.isNew) {
+      return 1; // a is after b
+    }
+
+    return 0;
+  });
+
+  renderProducts(sortedProducts);
 };
 
 init();
