@@ -42,6 +42,7 @@ export const renderProducts = (products: Product[]) => {
     cardImg.src = product.image;
     cardImg.alt = product.name;
 
+    // if the product is a licorice, don't write variant in title
     if (product.category !== "licorice") {
       cardTitle.textContent = product.name + " - " + product.variant;
     } else {
