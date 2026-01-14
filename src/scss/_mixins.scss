@@ -59,6 +59,16 @@
   font-style: normal;
 }
 
+@mixin link-style-category {
+  font-size: var.$fs-body-lg;
+  $font-family: var.$ff-heading;
+}
+
+@mixin link-style-footer {
+  font-size: var.$fs-body-lg;
+  $font-family: var.$ff-body;
+}
+
 // Breakpoints
 @media (min-width: 64em) {
   // styles go here

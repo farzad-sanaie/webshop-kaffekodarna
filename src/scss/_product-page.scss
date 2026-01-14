@@ -7,7 +7,7 @@
 
   &__intro {
     &-title {
-      color: var.$color-accent-pink;
+      color: var.$color-accent-cherry;
       @include m.text-style-heading();
     }
   }
@@ -15,12 +15,16 @@
   &__container {
     flex-direction: column;
 
+    &-title {
+      @include m.text-style-subheading-md();
+    }
+
     .categories {
       margin: 0;
       flex-direction: column;
       gap: var.$s-xs;
 
-      @media screen and (min-width: 640px) {
+      @include m.breakpoint-up(medium) {
         margin: 0 var.$m-lg;
         flex-direction: row;
         gap: var.$s-lg;
@@ -31,11 +35,21 @@
         height: var.$s-xl;
         width: 100%;
         color: var.$color-white;
-        font-size: var.$fs-body-lg;
         font-weight: var.$fw-md;
         text-align: center;
 
-        @media screen and (min-width: 640px) {
+        @include m.link-style-category();
+
+        &:hover,
+        &:active {
+          background-color: var.$color-accent-cherry;
+        }
+
+        &:active {
+          background-color: lighten(var.$color-accent-cherry, 5%);
+        }
+
+        @include m.breakpoint-up(medium) {
           height: var.$s-xxl;
           border-radius: var.$br-btn;
         }
@@ -77,7 +91,7 @@
     grid-template-columns: repeat(1, 1fr);
     gap: var.$s-sm;
 
-    @media screen and (min-width: 640px) {
+    @include m.breakpoint-up(medium) {
       grid-template-columns: repeat(2, 1fr);
       gap: var.$s-md;
     }
@@ -86,7 +100,7 @@
       grid-template-columns: repeat(3, 1fr);
     }
 
-    @media screen and (min-width: 1024px) {
+    @include m.breakpoint-up(large) {
       grid-template-columns: repeat(4, 1fr);
     }
   }
