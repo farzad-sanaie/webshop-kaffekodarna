@@ -1,3 +1,6 @@
+@use "variables" as var;
+@use "mixins" as m;
+
 main {
   flex: 1;
   display: flex;
@@ -21,7 +24,7 @@ main {
 }
 
 section h2 {
-  color: $color-primary-teal;
+  color: var.$color-primary-teal;
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
 }
@@ -32,13 +35,13 @@ section h2 {
   gap: 1.5rem;
   flex-direction: column;
 
-  @include breakpoint-up(large) {
+  @include m.breakpoint-up(large) {
     flex-direction: row;
   }
 
   .category_btns {
     width: 250px;
-    background: $color-accent-pink;
+    background: var.$color-accent-pink;
     color: #fff;
     padding: 1rem 2.5rem;
     border-radius: 10px;
@@ -59,7 +62,7 @@ section h2 {
 
     flex-direction: column;
 
-    @include breakpoint-up(large) {
+    @include m.breakpoint-up(large) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
@@ -110,14 +113,14 @@ section h2 {
     }
 
     h3 {
-      color: $color-primary-teal;
+      color: var.$color-primary-teal;
       font-size: 1.5rem;
       margin-bottom: 0.5rem;
     }
 
     .see_more_btn {
       margin-top: 1rem;
-      background: $color-accent-pink;
+      background: var.$color-accent-pink;
       color: #ffff;
       border: none;
       border-radius: 10px;
@@ -128,7 +131,7 @@ section h2 {
   }
 
   .view_all_btn {
-    background: $color-primary-teal;
+    background: var.$color-primary-teal;
     color: #fff;
     border: none;
     padding: 1rem 2.5rem;

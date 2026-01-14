@@ -1,4 +1,6 @@
 // reset & box Sizing
+@use "variables" as var;
+@use "mixins" as m;
 
 html {
   font-size: 100%;
@@ -16,14 +18,14 @@ html {
 // body
 
 body {
-  font-size: $font-s;
+  font-size: var.$font-s;
   line-height: 1.6;
-  color: $color-primary-teal;
-  background-color: $color-background-cream;
+  color: var.$color-primary-teal;
+  background-color: var.$color-background-cream;
   overflow-x: hidden;
 
-  @include breakpoint-up(large) {
-    font-size: $font-m;
+  @include m.breakpoint-up(large) {
+    font-size: var.$font-m;
   }
 
   &.noscroll {
@@ -47,7 +49,7 @@ h6 {
 // paragraphs & links
 
 p {
-  @include text-style-body;
+  @include m.text-style-body;
   margin-bottom: 1.5rem;
 }
 
@@ -55,7 +57,7 @@ a,
 a:visited,
 a:hover {
   text-decoration: none;
-  color: $color-accent-pink;
+  color: var.$color-accent-pink;
 }
 
 // spacing
@@ -70,7 +72,7 @@ a:hover {
     padding-bottom: 4.375rem;
     padding-left: 1.5rem;
 
-    @include breakpoint-up(large) {
+    @include m.breakpoint-up(large) {
       padding-top: 6rem;
       padding-bottom: 6rem;
     }
@@ -79,7 +81,7 @@ a:hover {
     padding-top: 4.375rem;
     padding-bottom: 4.375rem;
 
-    @include breakpoint-up(large) {
+    @include m.breakpoint-up(large) {
       padding-top: 6rem;
       padding-bottom: 6rem;
     }
@@ -91,7 +93,7 @@ a:hover {
   &--pt {
     padding-top: 4.375rem;
 
-    @include breakpoint-up(large) {
+    @include m.breakpoint-up(large) {
       padding-top: 6rem;
     }
   }
@@ -101,7 +103,7 @@ a:hover {
   &--pb {
     padding-bottom: 4.375rem;
 
-    @include breakpoint-up(large) {
+    @include m.breakpoint-up(large) {
       padding-bottom: 6rem;
     }
   }
@@ -131,13 +133,13 @@ a:hover {
 // vsisibility
 
 .hide-for-mobile {
-  @include breakpoint-down(medium) {
+  @include m.breakpoint-down(medium) {
     display: none;
   }
 }
 
 .hide-for-desktop {
-  @include breakpoint-up(large) {
+  @include m.breakpoint-up(large) {
     display: none;
   }
 }
