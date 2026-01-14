@@ -1,7 +1,7 @@
 // color
 $color-primary-teal: #166479;
 $color-secondary-teal: #77c0d4;
-$color-accent-cherry: #E33F6D;
+$color-accent-cherry: #e33f6d;
 $color-accent-pink: #e46a8c;
 $color-background-cream: #f7f1e9;
 $color-white: #ffffff;
@@ -16,16 +16,17 @@ $font-xl: 3.25rem; // 52px
 // new font sizes
 $fs-body-sm: 0.875rem; //14px
 $fs-body-lg: 1.125rem; //18px
+$fs-xs: 1.25rem; //20px
 $fs-sm: 1.5rem; //24px
 $fs-md: 2rem; //32px
 $fs-lg: 3rem; //48px
 $fs-xl: 4rem; //64px
 
 // font families
-$ff-h1: 'Lobster', serif;
-$ff-special: 'Lobster Two', serif;
-$ff-heading: 'Playfair Display', serif;
-$ff-body: 'Inter', sans-serif;
+$ff-h1: "Lobster", serif;
+$ff-special: "Lobster Two", serif;
+$ff-heading: "Playfair Display", serif;
+$ff-body: "Inter", sans-serif;
 
 //line height
 $line-height-sm: 1.2;
@@ -62,5 +63,7 @@ $br-card: 8px;
 $box-shadow-card: 0 2px 4px #00000015;
 
 //font weights
+$fw-xs: 300;
+$fw-sm: 400;
 $fw-md: 600;
 $fw-lg: 700;

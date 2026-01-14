@@ -77,7 +77,7 @@
     text-transform: uppercase;
 
     &__img {
-      height: var.$s-md;
+      height: var.$fs-body-lg;
       width: auto;
     }
 
@@ -128,13 +128,14 @@
   }
 
   &__title {
-    font-size: var.$fs-body-lg;
+    font-size: var.$fs-xs;
   }
 
   &__price {
     padding-bottom: var.$p-md;
-    font-size: 24pt;
-    font-weight: var.$fw-lg;
+    font-weight: var.$fw-xs;
+    font-size: var.$fs-body-lg;
+    color: var.$color-black;
   }
 
   &__btn {
@@ -184,6 +185,8 @@
   &__title {
     text-align: center;
     color: var.$color-accent-pink;
+
+    @include m.text-style-special();
   }
 
   &__link {
@@ -192,9 +195,10 @@
     gap: var.$s-sm;
 
     color: var.$color-primary-teal;
-    font-size: var.$fs-body-lg;
     text-transform: uppercase;
     font-weight: var.$fw-md;
+
+    @include m.link-style-footer();
 
     &:visited {
       color: var.$color-primary-teal;

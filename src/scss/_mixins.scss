@@ -2,15 +2,15 @@
 @use "sass:map";
 
 // text styles
-@mixin font-settings{
+@mixin font-settings {
   font-optical-sizing: auto;
   font-style: normal;
 }
 
 @mixin text-style-special {
-  font-size: var.$fs-lg;
+  font-size: var.$fs-md;
   font-family: var.$ff-special;
-  font-weight: 400;
+  font-weight: 700;
   @include font-settings();
 }
 
@@ -40,7 +40,7 @@
 }
 
 @mixin text-style-subheading-sm {
-  font-size: var.$fs-md;
+  font-size: var.$fs-sm;
   @include text-style-subheading();
 }
 
@@ -61,12 +61,12 @@
 
 @mixin link-style-category {
   font-size: var.$fs-body-lg;
-  $font-family: var.$ff-heading;
+  font-family: var.$ff-heading;
 }
 
 @mixin link-style-footer {
   font-size: var.$fs-body-lg;
-  $font-family: var.$ff-body;
+  font-family: var.$ff-body;
 }
 
 // Breakpoints
