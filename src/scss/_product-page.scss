@@ -2,7 +2,6 @@
 @use "mixins" as m;
 
 .shop-hero {
-  padding-top: var.$p-lg;
   text-align: left;
 
   &__intro {
@@ -59,8 +58,8 @@
 }
 
 .shop {
-  padding-top: var.$p-md;
   flex-direction: column;
+  padding-top: var.$p-lg;
 
   .sort {
     display: inline-flex;
