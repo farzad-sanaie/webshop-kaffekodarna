@@ -1,5 +1,7 @@
 // text styles
 @use "variables" as var;
+@use "sass:map";
+
 
 @mixin text-style-heading {
   font-size: var.$font-xl;
@@ -52,13 +54,13 @@ $breakpoints-down: (
 );
 
 @mixin breakpoint-up($size) {
-  @media (min-width: map-get($breakpoints-up, $size)) {
+  @media (min-width: map.get($breakpoints-up, $size)) {
     @content;
   }
 }
 
 @mixin breakpoint-down($size) {
-  @media (max-width: map-get($breakpoints-down, $size)) {
+  @media (max-width: map.get($breakpoints-down, $size)) {
     @content;
   }
 }
