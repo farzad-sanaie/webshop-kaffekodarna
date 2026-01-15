@@ -156,3 +156,65 @@ a:hover {
 
   text-transform: uppercase;
 }
+
+.cart-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: var.$s-sm;
+
+  background-color: var.$color-primary-teal;
+  border: none;
+  border-radius: var.$br-btn;
+  height: var.$s-xxl;
+
+  font-size: var.$fs-body-sm;
+  color: var.$color-background-cream;
+  text-transform: uppercase;
+
+  transition: background-color 0.4s ease;
+
+  img {
+    height: var.$s-md;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--primary {
+    background-color: var.$color-primary-teal;
+
+    &:hover {
+      background-color: var.$color-accent-pink;
+    }
+  }
+
+  &--secondary {
+    background-color: var.$color-accent-pink;
+
+    &:hover {
+      background-color: var.$color-primary-teal;
+    }
+  }
+}
+
+.favorite {
+  width: var.$s-xxl;
+  height: var.$s-xxl;
+
+  background: none;
+  background-image: url(/public/img/icon_wishlist_deafult.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border: none;
+
+  transition: background-image 0.4s ease;
+
+  &:hover {
+    cursor: pointer;
+    background-image: url(/public/img/icon_wishlist_filled.svg);
+  }
+}
