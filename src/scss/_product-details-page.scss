@@ -10,16 +10,28 @@
 
   padding-bottom: var.$p-lg;
 
+  @media screen and (min-width: 69.375rem) {
+    border-radius: var.$br-card;
+  }
+
   &__img {
     background-color: var.$color-background-cream;
     border-radius: var.$br-card;
     max-width: 100%;
+
+    @include m.breakpoint-up(medium) {
+      max-width: 40%;
+    }
   }
 
   &__title {
     color: var.$color-accent-cherry;
-    font-size: var.$fs-lg;
     @include m.text-style-heading();
+    font-size: var.$fs-lg;
+
+    @include m.breakpoint-up(medium) {
+      font-size: var.$fs-xl;
+    }
   }
 
   .description,
@@ -119,5 +131,15 @@
   &:hover {
     cursor: pointer;
     transform: scale(1.05);
+  }
+}
+
+.product {
+  flex-direction: column;
+  align-items: start;
+
+  @include m.breakpoint-up(medium) {
+    flex-direction: row;
+    gap: var.$s-lg;
   }
 }
