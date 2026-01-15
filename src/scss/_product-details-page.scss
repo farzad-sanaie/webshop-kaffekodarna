@@ -1,0 +1,21 @@
+@use "variables" as var;
+@use "mixins" as m;
+
+.product-details {
+  flex-direction: column;
+
+  background-color: var.$color-white;
+  text-align: left;
+  box-shadow: var.$box-shadow-card;
+
+  &__img {
+    background-color: var.$color-background-cream;
+    max-width: 100%;
+  }
+}
+
+.back-container {
+  p {
+    margin: 0;
+  }
+}
