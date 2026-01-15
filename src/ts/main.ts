@@ -1,6 +1,10 @@
 import "../scss/style.scss";
 import { loadProducts, renderProducts } from "./components/ProductCard";
 import type { Product } from "./models/Product";
+import { initHamburgerMenu } from "./components/HamburgerMenu";
+
+// initialize hamburger menu
+initHamburgerMenu();
 
 // initialize products
 const init = async () => {
