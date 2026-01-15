@@ -12,6 +12,22 @@
     background-color: var.$color-background-cream;
     max-width: 100%;
   }
+
+  &__title {
+    color: var.$color-accent-cherry;
+    @include m.text-style-heading();
+  }
+
+  &__heading {
+    @include m.text-style-subheading-sm();
+  }
+
+  &__description {
+  }
+
+  p {
+    margin-bottom: var.$m-lg;
+  }
 }
 
 .back-container {
