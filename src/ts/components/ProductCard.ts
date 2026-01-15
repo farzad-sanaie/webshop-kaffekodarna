@@ -36,9 +36,8 @@ export const renderProducts = (products: Product[]) => {
     cardPrice.className = "card__price";
 
     btnContainer.className = "btn-container flex";
-    btn.className = "card__btn";
-    btnImg.className = "card__btn-img";
-    favIcon.className = "card__favorite";
+    btn.className = "card__btn cart-btn cart-btn--primary";
+    favIcon.className = "favorite";
 
     // add content to elements
     cardImg.src = product.image;
@@ -60,7 +59,7 @@ export const renderProducts = (products: Product[]) => {
     favIcon.src = "/img/icon_wishlist_deafult.svg";
     favIcon.alt = "Favorite icon";
 
-    card.addEventListener("click", () => {
+    cardImg.addEventListener("click", () => {
       window.location.href = "/product-details-page.html";
     });
 

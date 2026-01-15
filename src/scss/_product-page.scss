@@ -117,7 +117,7 @@
   transition: transform 0.2s ease-in;
 
   &:hover {
-    cursor: pointer;
+    cursor: default;
     transform: translateY(-0.25rem);
   }
 
@@ -131,6 +131,10 @@
     max-width: 100%;
     background-color: var.$color-background-cream;
     border-radius: var.$br-card;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__title,
@@ -152,38 +156,6 @@
 
   &__btn {
     flex: 1;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    gap: var.$s-sm;
-
-    background-color: var.$color-primary-teal;
-    border: none;
-    border-radius: var.$br-btn;
-    height: var.$s-xl;
-
-    font-size: var.$fs-body-sm;
-    color: var.$color-background-cream;
-    text-transform: uppercase;
-
-    transition: background-color 0.4s ease;
-
-    &-img {
-      height: var.$s-md;
-    }
-
-    &:hover {
-      cursor: pointer;
-      background-color: var.$color-accent-pink;
-    }
-  }
-
-  &__favorite {
-    height: var.$s-xl;
-
-    &:hover {
-      cursor: pointer;
-    }
   }
 
   .btn-container {
