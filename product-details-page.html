@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Candy Avenue</title>
+    <link rel="stylesheet" href="/src/scss/style.scss" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Lobster&display=swap&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="overlay has-fade"></div>
+        <nav class="container container--pall flex flex-jc-sb flex-ai-c hide-for-desktop">
+            <a href="index.html" class="header__logo">
+                <img src="/img/logo.svg" alt="Candy Avenue 🍭" />
+            </a>
+
+            <a href="#" class="header__icon"><img src="/img/icon_Favorites.svg" alt="Favorites" /></a>
+
+            <a href="#" class="header__icon"><img src="/img/icon_ShoppingCartSimple.svg" alt="Shopping Cart" /></a>
+
+            <a id="btnHamburger" href="#" class="header__toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+
+            <div class="header__menu has-fade">
+                <a href="product-page.html">All</a>
+                <a href="product-page.html?isNew=true">New</a>
+                <a href="product-page.html?category=lollipops">Lollipops</a>
+                <a href="product-page.html?category=chocolate">Chocolate</a>
+                <a href="product-page.html?category=gummies">Gummies</a>
+                <a href="product-page.html?category=licorice">Licorice</a>
+            </div>
+        </nav>
+        <div class="header__desktop hide-for-mobile">
+            <div class="header_box container">
+                <a href="index.html" class="logo">
+                    <img src="/img/logo.svg" alt="Candy Avenue" />
+                </a>
+
+                <form id="search_form">
+                    <div class="search_wrapper">
+                        <input type="text" placeholder="Search for goodies..." />
+                        <button type="submit" class="search_btn">
+                            <img src="/img/icon_search.svg" alt="Search" />
+                        </button>
+                    </div>
+                </form>
+
+                <div id="icon_box">
+                    <a href="#"><img src="/img/icon_Favorites.svg" alt="Favorites" /></a>
+
+                    <a href="#"><img src="/img/icon_ShoppingCartSimple.svg" alt="Shopping Cart" /></a>
+                </div>
+            </div>
+
+            <div class="nav__desktop">
+                <ul class="nav_list">
+                    <li><a href="product-page.html">All</a></li>
+                    <li><a href="product-page.html?isNew=true">New</a></li>
+                    <li><a href="product-page.html?category=lollipops">Lollipops</a></li>
+                    <li><a href="product-page.html?category=chocolate">Chocolate</a></li>
+                    <li><a href="product-page.html?category=gummies">Gummies</a></li>
+                    <li><a href="product-page.html?category=licorice">Licorice</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="product-details flex container--px">
+            <div class="back flex flex-ai-c">
+                <img class="back__icon" src="img/icon_arrow_back.svg" alt="Back">
+                <p class="back__text">Back</p>
+            </div>
+
+            <div>
+                <img class="product-details__img" src="img/products/choco_bar_caramel.png" alt="Choco bar">
+                <h1 class="product-details__title">Choco Bar - Caramel</h1>
+
+                <div>
+                    <div class="description">
+                        <h2 class="description__heading">Product details</h2>
+                        <p class="description__text">Lorem ipsum</p>
+                    </div>
+
+                    <div class="ingredients">
+                        <h2 class="ingredients__heading">Ingredients</h2>
+                        <ul class="ingredients__list">
+                            <li>Lorem</li>
+                            <li>Ipsum</li>
+                        </ul>
+                    </div>
+
+                    <div class="product-actions flex">
+                        <div class="product-actions__quantity flex">
+                            <img src="img/icon_minus.svg" alt="Minus">
+                            <p>01</p>
+                            <img src="img/icon_plus.svg" alt="Plus">
+                        </div>
+
+                        <div>
+                            <button class="product-actions__btn">Add to cart <img src="img/icon_ShoppingCartSimple.svg"
+                                    alt="Shopping cart"></button>
+                            <img class="product-actions__fav" src="img/icon_wishlist_deafult.svg" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <a class="footer__logo" href="#">
+                <img src="/img/logo.svg" />
+            </a>
+
+            <div class="footer__social">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                        <title>Facebook</title>
+                        <path fill="#f7f1e9"
+                            d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.793C0 19.506.494 20 1.104 20h9.58v-7.745H8.076V9.237h2.606V7.01c0-2.583 1.578-3.99 3.883-3.99 1.104 0 2.052.082 2.329.119v2.7h-1.598c-1.254 0-1.496.597-1.496 1.47v1.928h2.989l-.39 3.018h-2.6V20h5.098c.608 0 1.102-.494 1.102-1.104V1.104C20 .494 19.506 0 18.896 0z" />
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
+                        <title>YouTube</title>
+                        <path fill="#f7f1e9"
+                            d="M10.333 0c-5.522 0-10 4.478-10 10 0 5.523 4.478 10 10 10 5.523 0 10-4.477 10-10 0-5.522-4.477-10-10-10zm3.701 14.077c-1.752.12-5.653.12-7.402 0C4.735 13.947 4.514 13.018 4.5 10c.014-3.024.237-3.947 2.132-4.077 1.749-.12 5.651-.12 7.402 0 1.898.13 2.118 1.059 2.133 4.077-.015 3.024-.238 3.947-2.133 4.077zM8.667 8.048l4.097 1.949-4.097 1.955V8.048z" />
+                    </svg>
+                </a>
+
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
+                        <title>Instagram</title>
+                        <path fill="#f7f1e9"
+                            d="M10.333 1.802c2.67 0 2.987.01 4.042.059 2.71.123 3.976 1.409 4.1 4.099.048 1.054.057 1.37.057 4.04 0 2.672-.01 2.988-.058 4.042-.124 2.687-1.386 3.975-4.099 4.099-1.055.048-1.37.058-4.042.058-2.67 0-2.986-.01-4.04-.058-2.717-.124-3.976-1.416-4.1-4.1-.048-1.054-.058-1.37-.058-4.041 0-2.67.01-2.986.058-4.04.124-2.69 1.387-3.977 4.1-4.1 1.054-.048 1.37-.058 4.04-.058zm0-1.802C7.618 0 7.278.012 6.211.06 2.579.227.56 2.242.394 5.877.345 6.944.334 7.284.334 10s.011 3.057.06 4.123c.166 3.632 2.181 5.65 5.816 5.817 1.068.048 1.408.06 4.123.06 2.716 0 3.057-.012 4.124-.06 3.628-.167 5.651-2.182 5.816-5.817.049-1.066.06-1.407.06-4.123s-.011-3.056-.06-4.122C20.11 2.249 18.093.228 14.458.06 13.39.01 13.049 0 10.333 0zm0 4.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.468a3.333 3.333 0 110-6.666 3.333 3.333 0 010 6.666zm5.339-9.87a1.2 1.2 0 10-.001 2.4 1.2 1.2 0 000-2.4z" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="footer__links col1">
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Brands</a>
+            </div>
+
+            <div class="footer__links col2">
+                <a href="#">FAQ</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="footer__cta">
+                <a href="#" class="button">Sign up to our newsletter!</a>
+            </div>
+            <div class="footer__copyright">
+                &copy; Candy Avenue. All Rights Reserved.
+            </div>
+        </div>
+
+        <div class="attribution">
+            FED25S - JavaScript, Webshop Assignment. Coded by
+            <a href="#">Name Name Name Name</a>.
+        </div>
+    </footer>
+
+    <script type="module" src="/src/ts/main.ts"></script>
+</body>
+
+</html>

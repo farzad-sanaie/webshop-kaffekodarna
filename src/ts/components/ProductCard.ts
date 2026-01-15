@@ -30,7 +30,7 @@ export const renderProducts = (products: Product[]) => {
 
     // add classes to elements
     card.className = "card flex flex-ai-c";
-    cardDiv.className = "detail-container flex flex-jc-sb"
+    cardDiv.className = "detail-container flex flex-jc-sb";
     cardImg.className = "card__img";
     cardTitle.className = "card__title";
     cardPrice.className = "card__price";
@@ -60,16 +60,20 @@ export const renderProducts = (products: Product[]) => {
     favIcon.src = "/img/icon_wishlist_deafult.svg";
     favIcon.alt = "Favorite icon";
 
+    card.addEventListener("click", () => {
+      window.location.href = "/product-details-page.html";
+    });
+
     // append elements
     btn.appendChild(btnImg);
     btnContainer.append(btn, favIcon);
 
     cardDiv.append(cardTitle, cardPrice, btnContainer);
     card.append(cardImg, cardDiv);
-    
+
     let newSpan;
 
-    if(product.isNew === true) {
+    if (product.isNew === true) {
       newSpan = document.createElement("span");
       newSpan.className = "new";
       newSpan.textContent = "New";

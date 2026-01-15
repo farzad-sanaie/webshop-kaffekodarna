@@ -1,0 +1,74 @@
+@use "variables" as var;
+@use "mixins" as m;
+
+.product-details {
+  flex-direction: column;
+
+  background-color: var.$color-white;
+  text-align: left;
+  box-shadow: var.$box-shadow-card;
+
+  padding-bottom: var.$p-lg;
+
+  &__img {
+    background-color: var.$color-background-cream;
+    border-radius: var.$br-card;
+    max-width: 100%;
+  }
+
+  &__title {
+    color: var.$color-accent-cherry;
+    @include m.text-style-heading();
+  }
+
+  .description,
+  .ingredients {
+    margin-bottom: var.$m-lg;
+    &__heading {
+      @include m.text-style-subheading-sm();
+    }
+  }
+
+  .description {
+    &__text {
+      margin: 0;
+    }
+  }
+
+  .ingredients {
+    &__list {
+      margin: 0 var.$m-md;
+    }
+  }
+
+  .product-actions {
+    flex-direction: column;
+    align-items: start;
+
+    &__quantity {
+      border: solid 2px var.$color-primary-teal;
+      border-radius: var.$br-btn;
+      padding: var.$p-sm var.$p-md;
+
+      gap: var.$s-md;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+// back button
+.back {
+  margin: var.$m-md 0;
+  &__icon {
+    height: var.$s-lg;
+  }
+
+  &__text {
+    margin: 0;
+    text-transform: uppercase;
+    @include m.text-style-body-bold();
+  }
+}
