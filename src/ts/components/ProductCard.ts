@@ -59,6 +59,7 @@ export const renderProducts = (products: Product[]) => {
     favIcon.src = "/img/icon_wishlist_deafult.svg";
     favIcon.alt = "Favorite icon";
 
+    // add event listener to img
     cardImg.addEventListener("click", () => {
       window.location.href = "/product-details-page.html";
     });
