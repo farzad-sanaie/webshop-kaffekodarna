@@ -1,6 +1,5 @@
 import type { Product } from "../models/Product";
 
-
 const grid = document.getElementById("item-grid") as HTMLElement;
 
 // load in products
@@ -31,7 +30,7 @@ export const renderProducts = (products: Product[]) => {
 
     // add classes to elements
     card.className = "card flex flex-ai-c";
-    cardDiv.className = "detail-container flex flex-jc-sb"
+    cardDiv.className = "detail-container flex flex-jc-sb";
     cardImg.className = "card__img";
     cardTitle.className = "card__title";
     cardPrice.className = "card__price";
@@ -60,7 +59,8 @@ export const renderProducts = (products: Product[]) => {
     favIcon.src = "/img/icon_wishlist_deafult.svg";
     favIcon.alt = "Favorite icon";
 
-    card.addEventListener("click", () => {
+    // add event listener to img
+    cardImg.addEventListener("click", () => {
       window.location.href = "/product-details-page.html";
     });
 
@@ -70,10 +70,10 @@ export const renderProducts = (products: Product[]) => {
 
     cardDiv.append(cardTitle, cardPrice, btnContainer);
     card.append(cardImg, cardDiv);
-    
+
     let newSpan;
 
-    if(product.isNew === true) {
+    if (product.isNew === true) {
       newSpan = document.createElement("span");
       newSpan.className = "new";
       newSpan.textContent = "New";
