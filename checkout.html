@@ -20,7 +20,7 @@
       <nav
         class="container container--pall flex flex-jc-sb flex-ai-c hide-for-desktop"
       >
-        <a href="/" class="header__logo">
+        <a href="index.html" class="header__logo">
           <img src="/img/logo.svg" alt="Candy Aneue 🍭" />
         </a>
 
@@ -158,27 +158,30 @@
 
             <form>
               <div class="form__row">
-                <input type="text" placeholder="First name" />
-                <input type="text" placeholder="Last name" />
+                <input type="text" value="Samwise" required />
+                <input type="text" value="Gamgee" required />
               </div>
 
-              <input type="text" placeholder="Adress" />
+              <input type="text" value="Bagshot Row 3, Hobbiton" required />
 
               <div class="form__row">
-                <select>
-                  <option>Select country</option>
+                <select required>
+                  <option value="">Select country</option>
+                  <option value="sh" selected>Shire</option>
+                  <option value="me">Sweden</option>
                 </select>
 
-                <select>
-                  <option>Select city</option>
+                <select required>
+                  <option value="">Select city</option>
+                  <option value="ho" selected>Hobbiton</option>
                 </select>
 
-                <input type="text" placeholder="Zip code" />
+                <input type="text" value="00001" required />
               </div>
 
               <div class="form__row">
-                <input type="email" placeholder="Email" />
-                <input type="tel" placeholder="Phone number" />
+                <input type="email" value="whataboutsecondbreakfast@potatoes.sh" required />
+                <input type="tel" value="+123456789" required />
               </div>
             </form>
           </section>
