@@ -158,11 +158,27 @@
 
             <form>
               <div class="form__row">
-                <input type="text" placeholder="First name" required />
-                <input type="text" placeholder="Last name" required />
+                <input
+                  id="firstName"
+                  type="text"
+                  placeholder="First name"
+                  required
+                />
+                <input
+                  id="lastName"
+                  type="text"
+                  placeholder="Last name"
+                  required
+                />
               </div>
 
-              <input type="text" placeholder="Street address" required />
+              <input
+                id="address"
+                type="text"
+                placeholder="Street address"
+                required
+              />
+
               <div class="form__row">
                 <select required>
                   <option value="">Select country</option>
@@ -174,12 +190,17 @@
                   <option value="ho" selected>Hobbiton</option>
                 </select>
 
-                <input type="text" placeholder="Zip code" required />
+                <input id="zip" type="text" placeholder="Zip code" required />
               </div>
 
               <div class="form__row">
-                <input type="email" placeholder="Email" required />
-                <input type="tel" placeholder="Phone number" required />
+                <input id="email" type="email" placeholder="Email" required />
+                <input
+                  id="phone"
+                  type="tel"
+                  placeholder="Phone number"
+                  required
+                />
               </div>
             </form>
           </section>
