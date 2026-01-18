@@ -9,6 +9,20 @@ const autoFillData: Record<string, string> = {
   phone: "+46 70 123 45 67",
 };
 
+function typeText(input: HTMLInputElement, text: string, speed = 40) {
+  let index = 0;
+  input.value = "";
+
+  const interval = setInterval(() => {
+    input.value += text[index];
+    index++;
+
+    if (index >= text.length) {
+      clearInterval(interval);
+    }
+  }, speed);
+}
+
 export function initShippingForm() {
   Object.entries(autoFillData).forEach(([id, value]) => {
     const input = document.getElementById(id) as HTMLInputElement | null;
@@ -17,7 +31,7 @@ export function initShippingForm() {
 
     input.addEventListener("focus", () => {
       if (!input.value) {
-        input.value = value;
+        typeText(input, value);
       }
     });
   });
