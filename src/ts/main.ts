@@ -9,6 +9,7 @@ initHamburgerMenu();
 // initialize products
 initProductCards();
 
+// initialize shipping form
 document.addEventListener("DOMContentLoaded", () => {
   initShippingForm();
 });
