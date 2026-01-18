@@ -10,5 +10,15 @@ const autoFillData: Record<string, string> = {
 };
 
 export function initShippingForm() {
-  // all logic lives here
+  Object.entries(autoFillData).forEach(([id, value]) => {
+    const input = document.getElementById(id) as HTMLInputElement | null;
+
+    if (!input) return;
+
+    input.addEventListener("focus", () => {
+      if (!input.value) {
+        input.value = value;
+      }
+    });
+  });
 }
