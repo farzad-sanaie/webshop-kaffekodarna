@@ -158,56 +158,73 @@
 
             <form>
               <div class="form__row">
-                <label for="firstName">First name</label>
+                <div class="form__group">
+                  <label for="firstName">First name</label>
+                  <input
+                    id="firstName"
+                    type="text"
+                    placeholder="First name"
+                    required
+                  />
+                </div>
+
+                <div class="form__group">
+                  <label for="lastName">Last name</label>
+                  <input
+                    id="lastName"
+                    type="text"
+                    placeholder="Last name"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form__group">
+                <label for="address">Address</label>
                 <input
-                  id="firstName"
+                  id="address"
                   type="text"
-                  placeholder="First name"
-                  required
-                />
-                <label for="lastName">Last name</label>
-                <input
-                  id="lastName"
-                  type="text"
-                  placeholder="Last name"
+                  placeholder="Street address"
                   required
                 />
               </div>
 
-              <label for="address">Address</label>
-              <input
-                id="address"
-                type="text"
-                placeholder="Street address"
-                required
-              />
-
               <div class="form__row">
-                <label for="country">Country</label>
-                <input
-                  id="country"
-                  type="text"
-                  placeholder="Country"
-                  required
-                />
+                <div class="form__group">
+                  <label for="country">Country</label>
+                  <input
+                    id="country"
+                    type="text"
+                    placeholder="Country"
+                    required
+                  />
+                </div>
 
-                <label for="city">City</label>
-                <input id="city" type="text" placeholder="City" required />
-
-                <label for="zip">Zip code</label>
-                <input id="zip" type="text" placeholder="Zip code" required />
+                <div class="form__group">
+                  <label for="city">City</label>
+                  <input id="city" type="text" placeholder="City" required />
+                </div>
+                <div class="form__group">
+                  <label for="zip">Zip code</label>
+                  <input id="zip" type="text" placeholder="Zip code" required />
+                </div>
               </div>
 
               <div class="form__row">
-                <label for="email">Email</label>
-                <input id="email" type="email" placeholder="Email" required />
-                <label for="phone">Phone</label>
-                <input
-                  id="phone"
-                  type="tel"
-                  placeholder="Phone number"
-                  required
-                />
+                <div class="form__group">
+                  <label for="email">Email</label>
+                  <input id="email" type="email" placeholder="Email" required />
+                </div>
+
+                <div class="form__group">
+                  <label for="phone">Phone</label>
+                  <input
+                    id="phone"
+                    type="tel"
+                    placeholder="Phone number"
+                    required
+                  />
+                </div>
               </div>
             </form>
           </section>
