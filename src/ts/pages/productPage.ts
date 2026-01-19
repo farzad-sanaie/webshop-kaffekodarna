@@ -24,6 +24,7 @@ const getFilteredProducts = (
 
   let filtered = products;
 
+  // filter products based on parameter in url
   if (category) {
     filtered = filtered.filter((p) => p.category === category);
   }
@@ -57,6 +58,7 @@ export const setPageTitle = (
   if (isNew) {
     pageTitleElem.textContent = "New arrivals";
   } else if (category) {
+    // capitalizes text and sets the title to category name
     pageTitleElem.textContent = category[0].toUpperCase() + category.slice(1);
   } else {
     pageTitleElem.textContent = "All products";

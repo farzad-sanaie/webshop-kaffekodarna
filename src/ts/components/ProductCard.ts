@@ -75,6 +75,7 @@ const createProductCard = (product: Product): HTMLElement => {
   cardDiv.append(cardTitle, cardPrice, btnContainer);
   card.append(cardImg, cardDiv);
 
+  // if product is new, add span element with text "New"
   if (product.isNew) {
     const newSpan = document.createElement("span");
     newSpan.className = "new";
