@@ -3,6 +3,7 @@ import { initHamburgerMenu } from "./components/HamburgerMenu";
 import { initShippingForm } from "./components/ShippingForm";
 import { initProductDetails } from "./pages/productDetails";
 import { initProductPage } from "./pages/productPage";
+import "./utils/confetti";
 
 // initialize hamburger menu
 initHamburgerMenu();

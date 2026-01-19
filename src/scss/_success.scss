@@ -1,0 +1,62 @@
+@use "variables" as var;
+
+.success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var.$p-xxl var.$p-md;
+}
+
+.success__content {
+  max-width: 520px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.success__icon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: var.$m-lg;
+}
+
+.success__title {
+  font-family: var.$ff-special;
+  font-size: var.$fs-lg;
+  color: var.$color-primary-teal;
+  line-height: var.$line-height-sm;
+  margin-bottom: var.$m-sm;
+}
+
+.success__subtitle {
+  font-family: var.$ff-heading;
+  font-size: var.$fs-sm;
+  font-weight: var.$fw-md;
+  margin-bottom: var.$m-lg;
+}
+
+.success__text {
+  font-family: var.$ff-body;
+  font-size: var.$fs-body-lg;
+  line-height: var.$line-height-lg;
+  margin-bottom: var.$m-xxl;
+}
+
+.success .success__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var.$s-sm;
+  padding: var.$new-p-vertical var.$new-p-horizontal;
+  background-color: var.$color-accent-pink;
+  color: var.$color-white;
+  font-family: var.$ff-body;
+  font-size: var.$fs-body-sm;
+  font-weight: var.$fw-lg;
+  border-radius: var.$br-btn;
+  text-decoration: none;
+
+  &:hover {
+    background-color: var.$color-accent-cherry;
+  }
+}
