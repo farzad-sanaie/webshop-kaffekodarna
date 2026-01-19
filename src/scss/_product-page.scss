@@ -60,30 +60,6 @@
 .shop {
   flex-direction: column;
 
-  .sort {
-    display: inline-flex;
-    align-self: flex-end;
-    gap: var.$s-sm;
-
-    padding-bottom: var.$p-md;
-
-    background: none;
-    border: none;
-    color: var.$color-primary-teal;
-    font-size: var.$fs-body-lg;
-
-    text-transform: uppercase;
-
-    &__img {
-      height: var.$fs-body-lg;
-      width: auto;
-    }
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
   &__items {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
