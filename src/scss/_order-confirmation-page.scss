@@ -1,2 +1,33 @@
 @use "variables" as var;
 @use "mixins" as m;
+
+.orderStatus {
+  flex-direction: column;
+
+  &__text {
+    text-align: center;
+
+    h1 {
+      @include m.text-style-heading;
+      font-size: var.$fs-lg;
+      @include m.breakpoint-up(large) {
+        font-size: var.$fs-xl;
+      }
+    }
+    h2 {
+      @include m.text-style-subheading-sm;
+      font-weight: 600;
+      font-size: var.$fs-body-lg;
+      @include m.breakpoint-up(large) {
+        font-size: var.$fs-sm;
+      }
+    }
+    p {
+      @include m.text-style-body;
+      font-size: var.$fs-body-sm;
+      @include m.breakpoint-up(large) {
+        font-size: var.$fs-body-lg;
+      }
+    }
+  }
+}
