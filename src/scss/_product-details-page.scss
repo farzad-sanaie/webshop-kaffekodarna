@@ -20,7 +20,7 @@
     max-width: 100%;
 
     @include m.breakpoint-up(medium) {
-      max-width: 40%;
+      max-width: 45%;
     }
   }
 
@@ -55,8 +55,12 @@
       font-size: var.$fs-body-sm;
 
       list-style: "- ";
-      list-style-position: inside;
+      margin-left: var.$m-md;
       @include m.text-style-body();
+
+      b {
+        font-weight: var.$fw-md;
+      }
     }
   }
 
@@ -65,6 +69,11 @@
     align-items: start;
 
     gap: var.$s-sm;
+
+    @include m.breakpoint-up(large) {
+      flex-direction: row;
+      gap: var.$s-md;
+    }
 
     &__cta {
       width: 100%;
