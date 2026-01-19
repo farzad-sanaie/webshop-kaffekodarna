@@ -27,6 +27,7 @@
       @include m.text-style-body;
       font-size: var.$fs-body-sm;
       margin-bottom: var.$m-lg;
+      font-weight: 400;
     }
   }
 
@@ -57,7 +58,10 @@ svg {
   height: 100%;
   width: 100%;
   color: var.$color-primary-teal;
-  max-width: 10rem;
+  max-width: 4rem;
+  @include m.breakpoint-up(large) {
+    max-width: 6rem;
+  }
 }
 
 .circle {
