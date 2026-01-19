@@ -18,6 +18,7 @@ export const initProductDetails = async () => {
     return;
   }
 
+  // back button will take you back to previous page
   const backBtn = document.getElementById("back-btn");
   if (backBtn) {
     backBtn.addEventListener("click", () => {
@@ -35,6 +36,7 @@ const renderProductDetails = (product: Product): Product => {
     "product-description"
   ) as HTMLParagraphElement;
 
+  // if product is licorice, only show name, otherwise also show variant
   if (product.category !== "licorice") {
     title.textContent = product.name + " - " + product.variant;
   } else {
