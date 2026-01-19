@@ -31,7 +31,7 @@ const createProductCard = (product: Product): HTMLElement => {
   const cardImg = document.createElement("img");
   cardImg.className = "card__img";
   cardImg.src = product.image;
-  cardImg.alt = product.name;
+  cardImg.alt = product.name + " - " + product.variant;
   cardImg.dataset.productId = product.id; // give img data attribute which points to product id
 
   // if you click img, redirects you to details page with correct id
