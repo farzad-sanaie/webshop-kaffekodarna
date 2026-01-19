@@ -92,9 +92,26 @@
 
     <!-- ORDER CONFIRMATION MESSAGE -->
 
-    <main class="container">
+    <main class="container container--pall">
       <section class="orderStatus flex">
-        <div class="orderStatus__icon container--py"></div>
+        <div class="orderStatus__icon">
+          <svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+            <g
+              stroke="currentColor"
+              stroke-width="2"
+              fill="none"
+              fill-rule="evenodd"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                class="circle"
+                d="M13 1C6.372583 1 1 6.372583 1 13s5.372583 12 12 12 12-5.372583 12-12S19.627417 1 13 1z"
+              />
+              <path class="tick" d="M6.5 13.5L10 17 l8.808621-8.308621" />
+            </g>
+          </svg>
+        </div>
         <div class="orderStatus__text">
           <h1>Sweet!</h1>
           <h2>Your order has been placed.</h2>
@@ -104,7 +121,7 @@
             way!
           </p>
         </div>
-        <div class="orderStatus__cta flex">
+        <div class="orderStatus__cta flex flex-ai-c container--pb">
           <button class="cart-btn cart-btn--secondary">
             Continue Shopping
           </button>

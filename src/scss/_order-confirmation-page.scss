@@ -10,6 +10,7 @@
     h1 {
       @include m.text-style-heading;
       font-size: var.$fs-lg;
+      margin-top: var.$m-lg;
       @include m.breakpoint-up(large) {
         font-size: var.$fs-xl;
       }
@@ -25,9 +26,54 @@
     p {
       @include m.text-style-body;
       font-size: var.$fs-body-sm;
-      @include m.breakpoint-up(large) {
-        font-size: var.$fs-body-lg;
-      }
+      margin-bottom: var.$m-lg;
     }
+  }
+
+  &__cta {
+    flex-direction: column;
+    gap: var.$s-lg;
+    button {
+      max-width: 20rem;
+      width: 100%;
+    }
+    a {
+      text-decoration: underline;
+      color: var.$color-primary-teal;
+    }
+  }
+}
+
+// confirmation animation
+
+.orderStatus__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg {
+  display: block;
+  height: 100%;
+  width: 100%;
+  color: var.$color-primary-teal;
+  max-width: 10rem;
+}
+
+.circle {
+  stroke-dasharray: 76;
+  stroke-dashoffset: 76;
+  animation: draw 1s forwards;
+}
+
+.tick {
+  stroke-dasharray: 18;
+  stroke-dashoffset: 18;
+  animation: draw 1s forwards 1s;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
   }
 }
