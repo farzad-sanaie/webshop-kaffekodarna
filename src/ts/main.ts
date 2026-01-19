@@ -1,9 +1,9 @@
 import "../scss/style.scss";
 import { initHamburgerMenu } from "./components/HamburgerMenu";
-import { initProductCards } from "./components/ProductCard";
+import { initProductPage } from "./pages/productPage";
 
 // initialize hamburger menu
 initHamburgerMenu();
 
 // initialize products
-initProductCards();
+initProductPage();
