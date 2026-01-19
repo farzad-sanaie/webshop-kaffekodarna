@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -20,7 +20,7 @@
       <nav
         class="container container--pall flex flex-jc-sb flex-ai-c hide-for-desktop"
       >
-        <a href="/" class="header__logo">
+        <a href="index.html" class="header__logo">
           <img src="/img/logo.svg" alt="Candy Aneue 🍭" />
         </a>
 
@@ -39,12 +39,12 @@
         </a>
 
         <div class="header__menu has-fade">
-          <a href="">New</a>
-          <a href="">Popular</a>
-          <a href="">Limited</a>
-          <a href="">Chocolate</a>
-          <a href="">Gummies</a>
-          <a href="">Licorice</a>
+          <a href="product-page.html">All</a>
+          <a href="product-page.html?isNew=true">New</a>
+          <a href="product-page.html?category=lollipops">Lollipops</a>
+          <a href="product-page.html?category=chocolate">Chocolate</a>
+          <a href="product-page.html?category=gummies">Gummies</a>
+          <a href="product-page.html?category=licorice">Licorice</a>
         </div>
       </nav>
       <div class="header__desktop hide-for-mobile">
@@ -75,12 +75,16 @@
 
         <div class="nav__desktop">
           <ul class="nav_list">
-            <li><a href="index.html">New</a></li>
-            <li><a href="#">Popular</a></li>
-            <li><a href="#">Limited</a></li>
-            <li><a href="#">Chocolate</a></li>
-            <li><a href="#">Gummies</a></li>
-            <li><a href="#">Licorice</a></li>
+            <li><a href="product-page.html">All</a></li>
+            <li><a href="product-page.html?isNew=true">New</a></li>
+            <li>
+              <a href="product-page.html?category=lollipops">Lollipops</a>
+            </li>
+            <li>
+              <a href="product-page.html?category=chocolate">Chocolate</a>
+            </li>
+            <li><a href="product-page.html?category=gummies">Gummies</a></li>
+            <li><a href="product-page.html?category=licorice">Licorice</a></li>
           </ul>
         </div>
       </div>
@@ -154,27 +158,73 @@
 
             <form>
               <div class="form__row">
-                <input type="text" placeholder="First name" />
-                <input type="text" placeholder="Last name" />
+                <div class="form__group">
+                  <label for="firstName">First name</label>
+                  <input
+                    id="firstName"
+                    type="text"
+                    placeholder="First name"
+                    required
+                  />
+                </div>
+
+                <div class="form__group">
+                  <label for="lastName">Last name</label>
+                  <input
+                    id="lastName"
+                    type="text"
+                    placeholder="Last name"
+                    required
+                  />
+                </div>
               </div>
 
-              <input type="text" placeholder="Adress" />
-
-              <div class="form__row">
-                <select>
-                  <option>Select country</option>
-                </select>
-
-                <select>
-                  <option>Select city</option>
-                </select>
-
-                <input type="text" placeholder="Zip code" />
+              <div class="form__group">
+                <label for="address">Address</label>
+                <input
+                  id="address"
+                  type="text"
+                  placeholder="Street address"
+                  required
+                />
               </div>
 
               <div class="form__row">
-                <input type="email" placeholder="Email" />
-                <input type="tel" placeholder="Phone number" />
+                <div class="form__group">
+                  <label for="country">Country</label>
+                  <input
+                    id="country"
+                    type="text"
+                    placeholder="Country"
+                    required
+                  />
+                </div>
+
+                <div class="form__group">
+                  <label for="city">City</label>
+                  <input id="city" type="text" placeholder="City" required />
+                </div>
+                <div class="form__group">
+                  <label for="zip">Zip code</label>
+                  <input id="zip" type="text" placeholder="Zip code" required />
+                </div>
+              </div>
+
+              <div class="form__row">
+                <div class="form__group">
+                  <label for="email">Email</label>
+                  <input id="email" type="email" placeholder="Email" required />
+                </div>
+
+                <div class="form__group">
+                  <label for="phone">Phone</label>
+                  <input
+                    id="phone"
+                    type="tel"
+                    placeholder="Phone number"
+                    required
+                  />
+                </div>
               </div>
             </form>
           </section>
@@ -209,7 +259,10 @@
 
               <label>
                 <input type="radio" name="payment" checked />
-                <img src="/img/payment/creditcard.svg" alt="Debit / Credit Card" />
+                <img
+                  src="/img/payment/creditcard.svg"
+                  alt="Debit / Credit Card"
+                />
                 <span>Debit / Credit Card</span>
               </label>
             </div>
