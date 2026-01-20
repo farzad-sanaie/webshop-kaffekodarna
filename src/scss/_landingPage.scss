@@ -167,4 +167,17 @@ section h2 {
       }
     }
   }
+  &__btn {
+    max-width: 10rem;
+    width: 100%;
+    font-weight: 400;
+
+    &:hover {
+      background-color: var.$color-accent-cherry;
+    }
+
+    img {
+      height: var.$s-lg;
+    }
+  }
 }
