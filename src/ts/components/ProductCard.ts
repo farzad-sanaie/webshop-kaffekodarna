@@ -1,4 +1,5 @@
 import type { Product } from "../models/Product";
+import { setupFavoriteIcon } from "../services/favorites";
 
 const grid = document.getElementById("item-grid") as HTMLElement;
 
@@ -68,6 +69,7 @@ const createProductCard = (product: Product): HTMLElement => {
   favIcon.className = "favorite";
   favIcon.src = "/img/icon_wishlist_deafult.svg";
   favIcon.alt = "Favorite icon";
+  setupFavoriteIcon(favIcon, product.id);
 
   btn.appendChild(btnImg);
   btnContainer.append(btn, favIcon);
