@@ -9,15 +9,15 @@ main {
   padding-top: 1rem;
   padding-bottom: 2rem;
 
-  .hero {
-    margin: 1rem;
-    display: flex;
-    justify-content: center;
+  // .hero {
+  //   margin: 1rem;
+  //   display: flex;
+  //   justify-content: center;
 
-    img {
-      max-width: 350px;
-    }
-  }
+  //   img {
+  //     max-width: 350px;
+  //   }
+  // }
   p {
     margin-bottom: 6rem;
   }
@@ -138,5 +138,33 @@ section h2 {
     border-radius: 10px;
     cursor: pointer;
     font-weight: bold;
+  }
+}
+
+.hero {
+  &__img {
+    background: url("/public/img/Star_6.svg") no-repeat center;
+    background-size: contain;
+  }
+  &__text {
+    flex-direction: column;
+    h1 {
+      @include m.text-style-heading;
+      font-size: var.$fs-lg;
+      color: var.$color-accent-cherry;
+      margin-bottom: var.$m-sm;
+      @include m.breakpoint-up(large) {
+        font-size: var.$fs-xl;
+      }
+    }
+    h2 {
+      @include m.text-style-subheading-sm;
+      font-weight: 400;
+      color: var.$color-accent-pink;
+      font-size: var.$fs-sm;
+      @include m.breakpoint-up(large) {
+        font-size: var.$fs-md;
+      }
+    }
   }
 }
