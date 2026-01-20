@@ -1,5 +1,7 @@
 import { loadProducts } from "../components/ProductCard";
 import type { Product } from "../models/Product";
+import { addToCart } from "../cart";
+
 
 export const initProductDetails = async () => {
   const params = new URLSearchParams(window.location.search);
@@ -27,6 +29,14 @@ export const initProductDetails = async () => {
   }
 
   renderProductDetails(product);
+  const addBtn = document.getElementById("addToCartBtn");
+
+if (addBtn) {
+  addBtn.addEventListener("click", () => {
+    addToCart(product);
+  });
+}
+
 };
 
 const renderProductDetails = (product: Product): Product => {

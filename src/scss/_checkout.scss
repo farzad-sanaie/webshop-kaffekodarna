@@ -34,7 +34,6 @@
     max-width: 520px;
     font-size: 0.875rem;
     text-align: left;
-    //  font-weight: bold;
   }
 }
 
@@ -62,8 +61,8 @@
 
   &__header {
     display: grid;
-    grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
-    font-size: 1rem;
+    grid-template-columns: 2.5fr 1fr 1.3fr 1fr auto;
+    font-size: 0.75rem;
     font-weight: 600;
     padding-bottom: 1rem;
     border-bottom: 1px solid #eee;
@@ -88,14 +87,22 @@
   &__image {
     width: 44px;
     height: 44px;
-    background: #eaeaea;
     border-radius: 10px;
+    object-fit: contain;
+    background: #eaeaea;
+    display: block;
   }
 
   &__quantity {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+
+    span {
+      font-size: 0.75rem;
+      min-width: 16px;
+      text-align: center;
+    }
 
     button {
       width: 25px;
@@ -141,8 +148,7 @@
     flex-direction: column;
     gap: 1rem;
   }
-
-  // Wrap label + input pairs
+// Wrap label + input pairs
   .form__group {
     display: flex;
     flex-direction: column;
@@ -263,4 +269,11 @@
     cursor: pointer;
     font-size: 0.75rem;
   }
+}
+.mini-cart__img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #f5f5f5;
 }

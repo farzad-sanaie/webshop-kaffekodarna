@@ -1,4 +1,5 @@
 import type { Product } from "../models/Product";
+import { addToCart } from "../cart";
 
 const grid = document.getElementById("item-grid") as HTMLElement;
 
@@ -59,6 +60,10 @@ const createProductCard = (product: Product): HTMLElement => {
   const btn = document.createElement("button");
   btn.className = "card__btn cart-btn cart-btn--primary";
   btn.textContent = "Add to cart";
+
+  btn.addEventListener("click", () => {
+  addToCart(product);
+});
 
   const btnImg = document.createElement("img");
   btnImg.src = "/img/icon_ShoppingCartSimple.svg";
