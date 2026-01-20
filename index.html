@@ -106,16 +106,19 @@
               Timeless treats inspired <br />
               by the 1950's
             </h2>
-            <button class="cart-btn cart-btn--secondary hero__btn">
+            <button
+              onclick="document.location = 'product-page.html'"
+              class="cart-btn cart-btn--secondary hero__btn"
+            >
               Shop all <img src="img/ArrowRight.svg" alt="Arrow right" />
             </button>
           </div>
         </div>
       </section>
 
-      <section>
+      <section class="container">
         <h2>Popular categories</h2>
-        <div id="category_btns">
+        <div id="category_btns" class="flex">
           <button class="category_btns">Chocolate</button>
           <button class="category_btns">Gummies</button>
           <button class="category_btns">Licorice</button>
@@ -169,7 +172,13 @@
         </div>
 
         <!-- <button class="view_all_btn">View all candy</button> -->
-        <a href="/product-page.html" class="view_all_btn">View all candy</a>
+        <!-- <a href="/product-page.html" class="view_all_btn">View all candy</a> -->
+        <button
+          onclick="document.location = 'product-page.html'"
+          class="cart-btn cart-btn--secondary hero__btn"
+        >
+          Shop all <img src="img/ArrowRight.svg" alt="Arrow right" />
+        </button>
       </section>
     </main>
 
