@@ -6,7 +6,7 @@ import { initShippingForm } from "./components/ShippingForm";
 import { initProductPage } from "./pages/productPage";
 import { initProductDetails } from "./pages/productDetails";
 
-import { initCart } from "./cart";
+import { initCart } from "./cart/cart";
 import { renderCheckoutPage } from "./pages/checkoutPage";
 
 if (document.getElementById("checkout-cart")) {

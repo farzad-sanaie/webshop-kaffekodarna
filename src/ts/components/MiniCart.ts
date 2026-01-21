@@ -1,4 +1,4 @@
-import { renderMiniCart } from "../cart";
+import { renderMiniCart } from "../cart/cart";
 
 const cartIcon = document.querySelector(
   'img[alt="Shopping Cart"]'

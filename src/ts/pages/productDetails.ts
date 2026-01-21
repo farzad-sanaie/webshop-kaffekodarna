@@ -1,7 +1,7 @@
 import { loadProducts } from "../components/ProductCard";
 import type { Product } from "../models/Product";
 import { setupFavoriteIcon } from "../services/favorites";
-import { addToCart } from "../cart";
+import { addToCart } from "../cart/cart";
 
 
 export const initProductDetails = async () => {

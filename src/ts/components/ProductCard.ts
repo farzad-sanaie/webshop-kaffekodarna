@@ -1,6 +1,6 @@
 import type { Product } from "../models/Product";
 import { setupFavoriteIcon } from "../services/favorites";
-import { addToCart } from "../cart";
+import { addToCart } from "../cart/cart";
 
 const grid = document.getElementById("item-grid") as HTMLElement;
 
