@@ -43,7 +43,15 @@ export const updateCartBadge = () => {
   badge.innerText = total.toString();
   badge.style.display = total > 0 ? "block" : "none";
 };
+/* Add here instead of current solution:
+export const increase = (id: string) => {
 
+}
+
+export const decrease = (id: string) => {
+
+}
+*/
 export const renderMiniCart = () => {
   const list = document.getElementById("miniCartList");
   const sub = document.getElementById("miniCartSubtotal");
