@@ -1,3 +1,5 @@
+import { decrease, increase } from "../services/cartService";
+
 const updateSummary = (cart: any[]) => {
   let sum = 0;
 
@@ -63,26 +65,22 @@ export const renderCheckoutPage = () => {
 
     const minus = document.createElement("button");
     minus.innerText = "-";
-    minus.onclick = () => {
-      if (item.quantity > 1) {
-        item.quantity--;
-      } else {
-        cart.splice(i, 1);
-      }
-      saveCart(cart);
+
+    // fungerar inte än
+    decrease(minus, cart, item, i, () => {
       renderCheckoutPage();
-    };
+    });
 
     const qty = document.createElement("span");
     qty.innerText = item.quantity.toString();
 
     const plus = document.createElement("button");
     plus.innerText = "+";
-    plus.onclick = () => {
-      item.quantity++;
-      saveCart(cart);
+
+    // fungerar inte heller än
+    increase(plus, item, () => {
       renderCheckoutPage();
-    };
+    });
 
     qtyBox.appendChild(minus);
     qtyBox.appendChild(qty);

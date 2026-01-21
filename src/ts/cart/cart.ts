@@ -1,14 +1,10 @@
+import type { CartItem } from "../models/CartItem";
 import type { Product } from "../models/Product";
-
-
-
-type CartItem = Product & {
-  quantity: number;
-};
+import { decrease, increase } from "../services/cartService";
 
 let cart: CartItem[] = JSON.parse(localStorage.getItem("cart") || "[]");
 
-const saveCart = () => {
+export const saveCart = () => {
   localStorage.setItem("cart", JSON.stringify(cart));
 };
 
@@ -43,15 +39,7 @@ export const updateCartBadge = () => {
   badge.innerText = total.toString();
   badge.style.display = total > 0 ? "block" : "none";
 };
-/* Add here instead of current solution:
-export const increase = (id: string) => {
 
-}
-
-export const decrease = (id: string) => {
-
-}
-*/
 export const renderMiniCart = () => {
   const list = document.getElementById("miniCartList");
   const sub = document.getElementById("miniCartSubtotal");
@@ -70,31 +58,25 @@ export const renderMiniCart = () => {
     const li = document.createElement("li");
 
     const name = document.createElement("span");
-    name.innerText = `${item.name} – ${item.price} SEK`;
+    name.innerText = `${item.name} - ${item.price} SEK`;
 
     const minus = document.createElement("button");
     minus.innerText = "-";
-    minus.onclick = () => {
-      item.quantity--;
-      if (item.quantity <= 0) {
-        cart.splice(i, 1);
-      }
-      saveCart();
+
+    decrease(minus, cart, item, i, () => {
       updateCartBadge();
       renderMiniCart();
-    };
+    });
 
     const qty = document.createElement("span");
     qty.innerText = item.quantity.toString();
 
     const plus = document.createElement("button");
     plus.innerText = "+";
-    plus.onclick = () => {
-      item.quantity++;
-      saveCart();
+    increase(plus, item, () => {
       updateCartBadge();
       renderMiniCart();
-    };
+    });
 
     const remove = document.createElement("button");
     remove.innerText = "🗑";
