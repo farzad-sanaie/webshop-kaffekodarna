@@ -10,10 +10,12 @@ export const decrease = (
 ) => {
   btn.onclick = () => {
     item.quantity--;
+    // if quantity is less than or 0, removes item from cart
     if (item.quantity <= 0) {
       cart.splice(index, 1);
     }
     saveCart();
+    // executes callback function
     afterClick();
   };
 };
@@ -26,6 +28,7 @@ export const increase = (
   btn.onclick = () => {
     item.quantity++;
     saveCart();
+    // executes callback function
     afterClick();
   };
 };
