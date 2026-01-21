@@ -1,4 +1,4 @@
-import { loadCart } from "../cart/cart";
+import { cart } from "../cart/cart";
 import { decrease, increase } from "../services/cartService";
 
 const updateSummary = (cart: any[]) => {
@@ -29,7 +29,7 @@ export const renderCheckoutPage = () => {
     oldItems[0].remove();
   }
 
-  const cart = loadCart();
+  //const cart = loadCart();
   updateSummary(cart);
 
   for (let i = 0; i < cart.length; i++) {
@@ -62,7 +62,6 @@ export const renderCheckoutPage = () => {
     const minus = document.createElement("button");
     minus.innerText = "-";
 
-    // fungerar inte än
     decrease(minus, cart, item, i, () => {
       renderCheckoutPage();
     });
@@ -73,7 +72,6 @@ export const renderCheckoutPage = () => {
     const plus = document.createElement("button");
     plus.innerText = "+";
 
-    // fungerar inte heller än
     increase(plus, item, () => {
       renderCheckoutPage();
     });

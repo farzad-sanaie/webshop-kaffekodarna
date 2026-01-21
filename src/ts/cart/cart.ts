@@ -2,12 +2,12 @@ import type { CartItem } from "../models/CartItem";
 import type { Product } from "../models/Product";
 import { decrease, increase } from "../services/cartService";
 
-let cart: CartItem[] = JSON.parse(localStorage.getItem("cart") || "[]");
+export let cart: CartItem[] = JSON.parse(localStorage.getItem("cart") || "[]");
 
-export const loadCart = () => {
+/* export const loadCart = () => {
   const saved = localStorage.getItem("cart");
   return saved ? JSON.parse(saved) : [];
-};
+}; */
 
 export const saveCart = () => {
   localStorage.setItem("cart", JSON.stringify(cart));
