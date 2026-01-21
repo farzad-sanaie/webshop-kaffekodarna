@@ -4,6 +4,11 @@ import { decrease, increase } from "../services/cartService";
 
 let cart: CartItem[] = JSON.parse(localStorage.getItem("cart") || "[]");
 
+export const loadCart = () => {
+  const saved = localStorage.getItem("cart");
+  return saved ? JSON.parse(saved) : [];
+};
+
 export const saveCart = () => {
   localStorage.setItem("cart", JSON.stringify(cart));
 };

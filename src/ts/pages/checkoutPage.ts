@@ -1,3 +1,4 @@
+import { loadCart } from "../cart/cart";
 import { decrease, increase } from "../services/cartService";
 
 const updateSummary = (cart: any[]) => {
@@ -12,11 +13,6 @@ const updateSummary = (cart: any[]) => {
 
   if (sub) sub.innerText = sum.toString();
   if (total) total.innerText = sum.toString();
-};
-
-const loadCart = () => {
-  const saved = localStorage.getItem("cart");
-  return saved ? JSON.parse(saved) : [];
 };
 
 const saveCart = (cart: any[]) => {
