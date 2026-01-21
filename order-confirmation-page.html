@@ -20,8 +20,8 @@
       <nav
         class="container container--pall flex flex-jc-sb flex-ai-c hide-for-desktop"
       >
-        <a href="/" class="header__logo">
-          <img src="/img/logo.svg" alt="Candy Aneue 🍭" />
+        <a href="index.html" class="header__logo">
+          <img src="/img/logo.svg" alt="Candy Avenue 🍭" />
         </a>
 
         <a href="#" class="header__icon"
@@ -49,7 +49,7 @@
       </nav>
       <div class="header__desktop hide-for-mobile">
         <div class="header_box container">
-          <a href="#" class="logo">
+          <a href="index.html" class="logo">
             <img src="/img/logo.svg" alt="Candy Avenue" />
           </a>
 
@@ -90,123 +90,50 @@
       </div>
     </header>
 
-    <main class="flex flex-ai-c">
-      <!-- <div class="hero">
-      <img src="/img/hero.png" alt="Classic Candy Sweet as Ever" />
-    </div> -->
+    <!-- ORDER CONFIRMATION MESSAGE -->
 
-      <section class="hero container">
-        <div class="hero__img">
-          <div class="flex flex-ai-c hero__text container container--pall">
-            <h1 class="">
-              Classic Candy, <br />
-              Sweet as Ever
-            </h1>
-            <h2 class="">
-              Timeless treats inspired <br />
-              by the 1950's
-            </h2>
-            <button
-              onclick="document.location = 'product-page.html'"
-              class="cart-btn cart-btn--secondary hero__btn"
+    <main class="container container--pall">
+      <section class="orderStatus flex">
+        <div class="orderStatus__icon">
+          <svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+            <g
+              stroke="currentColor"
+              stroke-width="2"
+              fill="none"
+              fill-rule="evenodd"
+              stroke-linecap="round"
+              stroke-linejoin="round"
             >
-              Shop all <img src="img/ArrowRight.svg" alt="Arrow right" />
-            </button>
-          </div>
+              <path
+                class="circle"
+                d="M13 1C6.372583 1 1 6.372583 1 13s5.372583 12 12 12 12-5.372583 12-12S19.627417 1 13 1z"
+              />
+              <path class="tick" d="M6.5 13.5L10 17 l8.808621-8.308621" />
+            </g>
+          </svg>
         </div>
-      </section>
-
-      <section class="container">
-        <h2>Popular categories</h2>
-        <div id="category_btns" class="flex">
-          <button class="category_btns">Chocolate</button>
-          <button class="category_btns">Gummies</button>
-          <button class="category_btns">Licorice</button>
+        <div class="orderStatus__text">
+          <h1>Sweet!</h1>
+          <h2>Your order has been placed.</h2>
+          <p>
+            Your candy stash is officially reserved. <br />
+            Time to sit back, relax, and imagine all the sweetness coming your
+            way!
+          </p>
         </div>
-      </section>
-      <section class="new_arrivals">
-        <h2>New arrivals</h2>
-
-        <div class="flex products">
-          <article class="product_card">
-            <span class="badger">NEW</span>
-            <img
-              src="/img/products/filled_licorice_sticks.png"
-              alt="Filled licorice sticks"
-            />
-
-            <div class="product_info">
-              <h3>Filled licorice sticks</h3>
-              <p>Lorem ipsum</p>
-              <button class="see_more_btn">See more</button>
-            </div>
-          </article>
-
-          <article class="product_card">
-            <span class="badger">NEW</span>
-            <img
-              src="/img/products/choco_bar_caramel.png"
-              alt="Choco bar caramel"
-            />
-
-            <div class="product_info">
-              <h3>Choco bar caramel</h3>
-              <p>Lorem ipsum</p>
-              <button class="see_more_btn">See more</button>
-            </div>
-          </article>
-
-          <article class="product_card">
-            <span class="badger">NEW</span>
-            <img
-              src="/img/products/choco_bar_nougat.png"
-              alt="Choco bar nougat"
-            />
-
-            <div class="product_info">
-              <h3>Choco bar nougat</h3>
-              <p>Lorem ipsum</p>
-              <button class="see_more_btn">See more</button>
-            </div>
-          </article>
+        <div class="orderStatus__cta flex flex-ai-c">
+          <button
+            class="cart-btn cart-btn--secondary"
+            onclick="document.location = 'index.html'"
+          >
+            Continue Shopping
+          </button>
+          <!-- <a href="">View order details</a> -->
         </div>
-
-        <!-- <button class="view_all_btn">View all candy</button> -->
-        <!-- <a href="/product-page.html" class="view_all_btn">View all candy</a> -->
-        <button
-          onclick="document.location = 'product-page.html'"
-          class="cart-btn cart-btn--secondary hero__btn"
-        >
-          Shop all <img src="img/ArrowRight.svg" alt="Arrow right" />
-        </button>
       </section>
     </main>
 
-    <!-- <footer>
-      <div class="footer_inner container">
-        <a href="#" class="logo">
-          <img src="/img/logo.svg" alt="Candy Avenue" />
-        </a>
-
-        <div class="footer_box">
-          <ul>
-            <li>About us</li>
-            <li>Brands</li>
-          </ul>
-
-          <ul>
-            <li>FAQ</li>
-            <li>Contact us</li>
-          </ul>
-
-          <ul>
-            <li>Terms & Conditions</li>
-            <li>Cookies</li>
-            <li>Privacy policy</li>
-          </ul>
-        </div>
-      </div>
-    </footer> -->
+    <!-- //// END OF //// ORDER CONFIRMATION MESSAGE -->
 
     <footer class="footer">
       <div class="container">

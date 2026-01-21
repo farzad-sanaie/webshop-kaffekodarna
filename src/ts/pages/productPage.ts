@@ -1,5 +1,6 @@
 import { loadProducts, renderProducts } from "../components/ProductCard";
 import type { Product } from "../models/Product";
+import { getFavorites } from "../services/favorites";
 
 export const initProductPage = async () => {
   const products = await loadProducts();
@@ -21,6 +22,7 @@ const getFilteredProducts = (
 ): Product[] => {
   const category = params.get("category");
   const isNew = params.get("isNew") === "true";
+  const favorite = params.get("favorites") === "true";
 
   let filtered = products;
 
@@ -30,6 +32,10 @@ const getFilteredProducts = (
   }
   if (isNew) {
     filtered = filtered.filter((p) => p.isNew);
+  }
+  if (favorite) {
+    const favorites = getFavorites();
+    filtered = filtered.filter((p) => favorites.includes(p.id));
   }
 
   // sort products so new products are shown first
@@ -54,9 +60,12 @@ export const setPageTitle = (
 ) => {
   const category = params.get("category");
   const isNew = params.get("isNew") === "true";
+  const favorite = params.get("favorites") === "true";
 
   if (isNew) {
     pageTitleElem.textContent = "New arrivals";
+  } else if (favorite) {
+    pageTitleElem.textContent = "Favorites";
   } else if (category) {
     // capitalizes text and sets the title to category name
     pageTitleElem.textContent = category[0].toUpperCase() + category.slice(1);

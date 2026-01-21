@@ -1,5 +1,6 @@
 import { loadProducts } from "../components/ProductCard";
 import type { Product } from "../models/Product";
+import { setupFavoriteIcon } from "../services/favorites";
 import { addToCart } from "../cart";
 
 
@@ -26,6 +27,12 @@ export const initProductDetails = async () => {
     backBtn.addEventListener("click", () => {
       window.history.back();
     });
+  }
+
+  const favIcon = document.getElementById("fav-icon") as HTMLImageElement;
+  if (favIcon) {
+    // sets an initial image to icon
+    setupFavoriteIcon(favIcon, productId);
   }
 
   renderProductDetails(product);
