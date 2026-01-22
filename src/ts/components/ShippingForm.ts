@@ -9,6 +9,10 @@ const autoFillData: Record<string, string> = {
   phone: "+46 70 123 45 67",
 };
 
+const confirmButton = document.getElementById(
+  "confirm-order-btn",
+) as HTMLButtonElement | null;
+
 function typeText(input: HTMLInputElement, text: string, speed = 40) {
   let index = 0;
   input.value = "";
