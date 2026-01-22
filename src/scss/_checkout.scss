@@ -110,9 +110,9 @@
   }
 }
 
-.shipping {
+.shipping-form {
   background: #fff;
-  border-radius: 10px;
+  border-radius: var.$br-card;
   padding: var.$s-xl;
   margin: var.$s-xl 0;
 
@@ -122,16 +122,16 @@
   }
 
   form {
-    display: flex;
     flex-direction: column;
     gap: var.$s-md;
   }
   // Wrap label + input pairs
-  .form__group {
+  &__group {
     display: flex;
     flex-direction: column;
     gap: var.$s-sm;
     flex: 1;
+    padding-top: var.$p-md;
 
     label {
       @include m.text-style-body;
@@ -144,7 +144,7 @@
       width: 100%;
       padding: 0.75rem 1rem;
       border: 1px solid var.$color-background-cream;
-      border-radius: 5px;
+      border-radius: var.$br-btn;
       background: var.$color-white;
       color: var.$color-primary-teal;
       font-size: var.$fs-body-sm;
@@ -157,7 +157,7 @@
     }
   }
 
-  .form__row {
+  &__row {
     display: flex;
     flex-direction: column;
     gap: var.$s-md;
