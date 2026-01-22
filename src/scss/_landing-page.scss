@@ -128,14 +128,33 @@ section h2 {
     }
   }
 
-  .view-all-btn {
-    background: var.$color-primary-teal;
-    color: #fff;
-    border: none;
-    padding: 1rem 2.5rem;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: bold;
+  // .view-all-btn {
+  //   background: var.$color-primary-teal;
+  //   color: #fff;
+  //   border: none;
+  //   padding: 1rem 2.5rem;
+  //   border-radius: 10px;
+  //   cursor: pointer;
+  //   font-weight: bold;
+  // }
+
+  .shop-new-arrivals {
+    flex-direction: column;
+
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: var.$s-sm;
+
+      @include m.breakpoint-up(medium) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var.$s-md;
+      }
+
+      @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
   }
 }
 
