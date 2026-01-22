@@ -1,3 +1,4 @@
+// data used to auto-fill each input when focused
 const autoFillData: Record<string, string> = {
   firstName: "Samwise",
   lastName: "Gamgee",
@@ -9,58 +10,73 @@ const autoFillData: Record<string, string> = {
   phone: "+46 70 123 45 67",
 };
 
-const confirmButton = document.getElementById(
-  "confirm-order-btn",
-) as HTMLButtonElement | null;
-
-const shippingForm = document.getElementById(
-  "shipping-form",
-) as HTMLElement | null;
-
+// typing animation function for autofill
 function typeText(input: HTMLInputElement, text: string, speed = 40) {
   let index = 0;
-  input.value = "";
+  input.value = ""; // clear the field bf typing
 
   const interval = setInterval(() => {
     input.value += text[index];
     index++;
 
     if (index >= text.length) {
-      clearInterval(interval);
+      clearInterval(interval); // stop typing when done
     }
   }, speed);
 }
 
+// main function to initialize the shipping form
 export function initShippingForm() {
-  // autofill typing logic
+  // ensures the elements exist in the DOM
+  const shippingForm = document.getElementById(
+    "shipping-form",
+  ) as HTMLElement | null;
+
+  const confirmButton = document.getElementById(
+    "confirm-order-btn",
+  ) as HTMLButtonElement | null;
+
+  // stop here if the form or button is missing
+  if (!shippingForm || !confirmButton) return;
+
+  const shippingInputs = shippingForm.querySelectorAll(
+    "input[required]",
+  ) as NodeListOf<HTMLInputElement>;
+
+  // autofill logic, when user focuses on an input, it types in the value
   Object.entries(autoFillData).forEach(([id, value]) => {
     const input = document.getElementById(id) as HTMLInputElement | null;
 
     if (!input) return;
 
     input.addEventListener("focus", () => {
+      // only type if empty
       if (!input.value) {
         typeText(input, value);
       }
     });
   });
+
+  // red highlight disappear as soon as the user starts typing
+  shippingInputs.forEach((input) => {
+    input.addEventListener("input", () => {
+      input.classList.remove("input--error");
+    });
+  });
+
   // validation on confirm button click
   confirmButton?.addEventListener("click", (event) => {
     event.preventDefault(); // prevents form submission / reload
 
-    if (!shippingForm) return;
+    let hasErrors = false; // checks if input is empty
 
-    const inputs = shippingForm.querySelectorAll(
-      "input",
-    ) as NodeListOf<HTMLInputElement>;
-
-    let hasErrors = false;
-
-    inputs.forEach((input) => {
+    shippingInputs.forEach((input) => {
       if (input.value.trim() === "") {
+        // add red highlight if empty
         input.classList.add("input--error");
         hasErrors = true;
       } else {
+        // remove highlight if filled
         input.classList.remove("input--error");
       }
     });
