@@ -85,7 +85,7 @@ export const renderMiniCart = () => {
     const minus = document.createElement("button");
     minus.innerText = "-";
     // calls decrease function which applies onclick on minus button
-    decrease(minus, cart, item, i, () => {
+    decrease(minus, item, i, () => {
       updateCartBadge();
       renderMiniCart();
     });

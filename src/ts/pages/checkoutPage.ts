@@ -68,7 +68,7 @@ export const renderCheckoutPage = () => {
 
     // calls function "decrease"
     // after doing everything in decrease, calls "renderCheckoutPage"
-    decrease(minus, cart, item, i, () => {
+    decrease(minus, item, i, () => {
       renderCheckoutPage();
     });
 
@@ -112,7 +112,7 @@ export const renderCheckoutPage = () => {
 };
 
 const confirmBtn = document.getElementById(
-  "confirmOrderBtn"
+  "confirmOrderBtn",
 ) as HTMLButtonElement;
 
 if (confirmBtn) {
@@ -140,7 +140,7 @@ if (confirmBtn) {
     // loops through required fields
     for (let i = 0; i < requiredFields.length; i++) {
       const input = document.getElementById(
-        requiredFields[i]
+        requiredFields[i],
       ) as HTMLInputElement;
 
       // if there is no input in fields, gives an alert and returns

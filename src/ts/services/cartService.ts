@@ -1,12 +1,11 @@
-import { saveCart } from "../cart/cart";
+import { cart, saveCart } from "../cart/cart";
 import type { CartItem } from "../models/CartItem";
 
 export const decrease = (
   btn: HTMLButtonElement,
-  cart: CartItem[],
   item: CartItem,
   index: number,
-  afterClick: () => void
+  afterClick: () => void,
 ) => {
   btn.onclick = () => {
     item.quantity--;
@@ -23,7 +22,7 @@ export const decrease = (
 export const increase = (
   btn: HTMLButtonElement,
   item: CartItem,
-  afterClick: () => void
+  afterClick: () => void,
 ) => {
   btn.onclick = () => {
     item.quantity++;
