@@ -111,47 +111,47 @@ export const renderCheckoutPage = () => {
   }
 };
 
-const confirmBtn = document.getElementById(
-  "confirm-order-btn",
-) as HTMLButtonElement;
+// const confirmBtn = document.getElementById(
+//   "confirm-order-btn",
+// ) as HTMLButtonElement;
 
-if (confirmBtn) {
-  confirmBtn.addEventListener("click", () => {
-    // checks cart
-    const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+// if (confirmBtn) {
+//   confirmBtn.addEventListener("click", () => {
+//     // checks cart
+//     const cart = JSON.parse(localStorage.getItem("cart") || "[]");
 
-    // if cart doesnt contain any items, gives an alert and returns
-    if (cart.length === 0) {
-      alert("Your cart is empty!");
-      return;
-    }
+//     // if cart doesnt contain any items, gives an alert and returns
+//     if (cart.length === 0) {
+//       alert("Your cart is empty!");
+//       return;
+//     }
 
-    const requiredFields = [
-      "firstName",
-      "lastName",
-      "address",
-      "country",
-      "city",
-      "zip",
-      "email",
-      "phone",
-    ];
+//     const requiredFields = [
+//       "firstName",
+//       "lastName",
+//       "address",
+//       "country",
+//       "city",
+//       "zip",
+//       "email",
+//       "phone",
+//     ];
 
-    // loops through required fields
-    for (let i = 0; i < requiredFields.length; i++) {
-      const input = document.getElementById(
-        requiredFields[i],
-      ) as HTMLInputElement;
+//     // loops through required fields
+//     for (let i = 0; i < requiredFields.length; i++) {
+//       const input = document.getElementById(
+//         requiredFields[i],
+//       ) as HTMLInputElement;
 
-      // if there is no input in fields, gives an alert and returns
-      if (!input || input.value.trim() === "") {
-        alert("Please fill in all shipping details.");
-        return;
-      }
-    }
+//       // if there is no input in fields, gives an alert and returns
+//       if (!input || input.value.trim() === "") {
+//         alert("Please fill in all shipping details.");
+//         return;
+//       }
+//     }
 
-    // removes cart from local storage and redirects to new page
-    localStorage.removeItem("cart");
-    window.location.href = "order-confirmation-page";
-  });
-}
+//     // removes cart from local storage and redirects to new page
+//     localStorage.removeItem("cart");
+//     window.location.href = "order-confirmation-page";
+//   });
+// }

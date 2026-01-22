@@ -32,6 +32,7 @@ function typeText(input: HTMLInputElement, text: string, speed = 40) {
 }
 
 export function initShippingForm() {
+  // autofill typing logic
   Object.entries(autoFillData).forEach(([id, value]) => {
     const input = document.getElementById(id) as HTMLInputElement | null;
 
@@ -40,6 +41,27 @@ export function initShippingForm() {
     input.addEventListener("focus", () => {
       if (!input.value) {
         typeText(input, value);
+      }
+    });
+  });
+  // validation on confirm button click
+  confirmButton?.addEventListener("click", (event) => {
+    event.preventDefault(); // prevents form submission / reload
+
+    if (!shippingForm) return;
+
+    const inputs = shippingForm.querySelectorAll(
+      "input",
+    ) as NodeListOf<HTMLInputElement>;
+
+    let hasErrors = false;
+
+    inputs.forEach((input) => {
+      if (input.value.trim() === "") {
+        input.classList.add("input--error");
+        hasErrors = true;
+      } else {
+        input.classList.remove("input--error");
       }
     });
   });
