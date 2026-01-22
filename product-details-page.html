@@ -62,7 +62,7 @@
 
           <div class="cart-badge-container">
             <img id="cart-icon" src="/img/icon_ShoppingCartSimple.svg" alt="Shopping Cart" />
-            <span id="cart-badge">0</span>
+            <span id="cart-badge"></span>
           </div>
         </div>
       </div>
@@ -136,9 +136,9 @@
 
           <div class="product-actions flex">
             <div class="quantity flex flex-ai-c flex-jc-sb">
-              <button class="quantity__btn">-</button>
-              <p class="quantity__text">01</p>
-              <button class="quantity__btn">+</button>
+              <button class="quantity__btn" id="quantity-btn-dec">-</button>
+              <p class="quantity__text" id="quantity-text">01</p>
+              <button class="quantity__btn" id="quantity-btn-inc">+</button>
             </div>
 
             <div class="product-actions__cta flex">
