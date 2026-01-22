@@ -51,14 +51,12 @@ export const updateCartBadge = () => {
   const badge = document.getElementById("cart-badge");
   if (!badge) return;
 
-  let total = 0;
-  for (let i = 0; i < cart.length; i++) {
-    total += cart[i].quantity;
+  // if cart contains items: set display to block, otherwise none
+  if(cart.length > 0) {
+    badge.style.display = "block";
+  } else {
+    badge.style.display = "none";
   }
-
-  badge.innerText = total.toString();
-  // if total is bigger than 0, set display to block, otherwise none
-  badge.style.display = total > 0 ? "block" : "none";
 };
 
 export const renderMiniCart = () => {
