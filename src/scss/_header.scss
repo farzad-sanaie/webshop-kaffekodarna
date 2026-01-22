@@ -69,11 +69,7 @@
 
   &__menu {
     position: absolute;
-    // width: calc(100% - 3rem);
-    // left: 50%;
-    // transform: translateX(-50%);
     background: var.$color-primary-teal;
-    // margin-top: 1.5rem;
     padding: 1.625rem;
 
     top: 100%;
@@ -106,15 +102,6 @@
         display: block;
       }
     }
-  }
-}
-
-#search-form {
-  input {
-    width: 400px;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    border: none;
   }
 }
 
