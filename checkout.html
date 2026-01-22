@@ -24,9 +24,7 @@
 
       <a href="#" class="header__icon"><img src="/img/icon_Favorites.svg" alt="Favorites" /></a>
 
-      <!-- <a href="#" class="header__icon"><img src="/img/icon_ShoppingCartSimple.svg" alt="Shopping Cart" /></a> -->
-
-      <a id="btnHamburger" href="#" class="header__toggle">
+      <a id="btn-hamburger" href="#" class="header__toggle">
         <span></span>
         <span></span>
         <span></span>
@@ -47,56 +45,22 @@
           <img src="/img/logo.svg" alt="Candy Avenue" />
         </a>
 
-        <form id="search_form">
-          <div class="search_wrapper">
+        <form id="search-form" class="flex">
+          <div class="search-wrapper">
             <input type="text" placeholder="Search for goodies..." />
-            <button type="submit" class="search_btn">
+            <button type="submit" class="search-btn">
               <img src="/img/icon_search.svg" alt="Search" />
             </button>
           </div>
         </form>
 
-        <div id="icon_box">
+        <div id="icon-box">
           <a href="#"><img src="/img/icon_Favorites.svg" alt="Favorites" /></a>
-
-          <!-- <div style="position: relative">
-              <img
-                id="cartIcon"
-                src="/img/icon_ShoppingCartSimple.svg"
-                alt="Shopping Cart"
-              />
-              <span
-                id="cartBadge"
-                style="
-                  position: absolute;
-                  top: -6px;
-                  right: -6px;
-                  background: #e33f6d;
-                  color: white;
-                  border-radius: 50%;
-                  padding: 2px 6px;
-                  font-size: 12px;
-                  display: none;
-                "
-              >
-                0
-              </span>
-            </div> -->
         </div>
       </div>
-      <!-- <div id="miniCart" style="display: none">
-        <h3>Products</h3>
-
-        <ul id="miniCartList"></ul>
-
-        <p>Sub-total: <span id="miniCartSubtotal">0</span> SEK</p>
-        <p>Total: <span id="miniCartTotal">0</span> SEK</p>
-
-        <a href="checkout.html"> </a>
-      </div> -->
 
       <div class="nav__desktop">
-        <ul class="nav_list">
+        <ul class="nav-list">
           <li><a href="product-page.html">All</a></li>
           <li><a href="product-page.html?isNew=true">New</a></li>
           <li>
@@ -121,7 +85,6 @@
         the sweets on its way!
       </p>
     </section>
-    <!-- <div id="checkoutCart"></div> -->
 
     <section class="checkout__layout">
       <div class="checkout__left">
@@ -135,19 +98,19 @@
           <!-- JS -->
         </section>
 
-        <section class="shipping" id="shippingForm">
+        <section class="shipping" id="shipping-form">
           <h2>Shipping</h2>
 
           <form>
             <div class="form__row">
               <div class="form__group">
-                <label for="firstName">First name</label>
-                <input id="firstName" type="text" placeholder="First name" required />
+                <label for="first-name">First name</label>
+                <input id="first-name" type="text" placeholder="First name" required />
               </div>
 
               <div class="form__group">
-                <label for="lastName">Last name</label>
-                <input id="lastName" type="text" placeholder="Last name" required />
+                <label for="last-name">Last name</label>
+                <input id="last-name" type="text" placeholder="Last name" required />
               </div>
             </div>
 
@@ -246,7 +209,7 @@
           <span><span id="summary-total">0</span> SEK</span>
         </div>
 
-        <button id="confirmOrderBtn" class="summary__btn">
+        <button id="confirm-order-btn" class="summary__btn">
           CONFIRM MY ORDER →
         </button>
       </aside>

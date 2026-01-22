@@ -35,7 +35,7 @@ export const initProductDetails = async () => {
   }
 
   renderProductDetails(product);
-  const addBtn = document.getElementById("addToCartBtn");
+  const addBtn = document.getElementById("add-to-cart-btn");
 
   if (addBtn) {
     addBtn.addEventListener("click", () => {
@@ -48,7 +48,7 @@ const renderProductDetails = (product: Product): Product => {
   const title = document.getElementById("product-title") as HTMLHeadingElement;
   const img = document.getElementById("product-img") as HTMLImageElement;
   const text = document.getElementById(
-    "product-description"
+    "product-description",
   ) as HTMLParagraphElement;
 
   // if product is licorice, only show name, otherwise also show variant

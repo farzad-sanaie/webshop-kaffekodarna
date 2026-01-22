@@ -1,5 +1,5 @@
 export function initHamburgerMenu() {
-  const btnHamburger = document.querySelector<HTMLElement>("#btnHamburger");
+  const btnHamburger = document.querySelector<HTMLElement>("#btn-hamburger");
   const body = document.body;
   const header = document.querySelector<HTMLElement>(".header");
   const fadeElems = document.querySelectorAll<HTMLElement>(".has-fade");

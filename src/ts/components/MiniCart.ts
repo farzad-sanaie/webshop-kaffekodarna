@@ -1,4 +1,4 @@
-import { renderMiniCart } from "../cart/cart";
+/* import { renderMiniCart } from "../cart/cart";
 
 const cartIcon = document.querySelector(
   'img[alt="Shopping Cart"]'
@@ -10,3 +10,4 @@ cartIcon.addEventListener("click", () => {
   miniCart.classList.toggle("hidden");
   renderMiniCart();
 });
+ */

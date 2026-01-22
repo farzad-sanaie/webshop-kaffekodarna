@@ -112,7 +112,7 @@ export const renderCheckoutPage = () => {
 };
 
 const confirmBtn = document.getElementById(
-  "confirmOrderBtn",
+  "confirm-order-btn",
 ) as HTMLButtonElement;
 
 if (confirmBtn) {

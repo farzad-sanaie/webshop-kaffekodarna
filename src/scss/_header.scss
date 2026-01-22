@@ -93,7 +93,7 @@
   &__desktop {
     background: var.$color-primary-teal;
 
-    .header_box {
+    .header-box {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -109,7 +109,7 @@
   }
 }
 
-#searchForm {
+#search-form {
   input {
     width: 400px;
     padding: 0.5rem 1rem;
@@ -118,7 +118,7 @@
   }
 }
 
-#icon_box {
+#icon-box {
   display: flex;
   gap: 1rem;
   width: 80px;
@@ -131,7 +131,7 @@
 .nav__desktop {
   background: var.$color-accent-pink;
 
-  .nav_list {
+  .nav-list {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -162,11 +162,7 @@
   }
 }
 
-#search_form {
-  display: flex;
-}
-
-.search_wrapper {
+.search-wrapper {
   position: relative;
   width: 450px;
 }
@@ -183,7 +179,7 @@ input {
   }
 }
 
-.search_btn {
+.search-btn {
   position: absolute;
   right: 1rem;
   top: 50%;
@@ -193,7 +189,7 @@ input {
   cursor: pointer;
 }
 
-.search_btn img {
+.search-btn img {
   width: 18px;
   height: 18px;
   display: block;
@@ -214,7 +210,7 @@ input {
   display: none;
 }
 
-#miniCart {
+#mini-cart {
   position: absolute;
   top: 100%;
   right: 20px;
@@ -230,7 +226,7 @@ input {
   z-index: 1000;
 }
 
-#miniCart li {
+#mini-cart li {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -240,23 +236,22 @@ input {
   border-bottom: 1px solid #eee;
 }
 
-#miniCart li span:first-child {
+#mini-cart li span:first-child {
   flex: 1;
 }
 
-#miniCart li button {
+#mini-cart li button {
   padding: 0.2rem 0.5rem;
   border: 1px solid #ccc;
   background: white;
   cursor: pointer;
 }
 
-#miniCart li span {
+#mini-cart li span {
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
 }
-
 
 .mini-cart__checkout-btn {
   width: 100%;
@@ -280,7 +275,9 @@ input {
   align-items: center;
 
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
 
   &:hover {
     background-color: darken(var.$color-accent-pink, 5%);
@@ -290,4 +287,3 @@ input {
     transform: scale(0.97);
   }
 }
-

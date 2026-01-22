@@ -6,8 +6,8 @@ export let cart: CartItem[] = JSON.parse(localStorage.getItem("cart") || "[]");
 
 // initialize cart
 export const initCart = () => {
-  const icon = document.getElementById("cartIcon");
-  const miniCart = document.getElementById("miniCart");
+  const icon = document.getElementById("cart-icon");
+  const miniCart = document.getElementById("mini-cart");
 
   if (icon && miniCart) {
     icon.onclick = () => {
@@ -48,7 +48,7 @@ export const addToCart = (product: Product) => {
 
 // function to show number of items in cart
 export const updateCartBadge = () => {
-  const badge = document.getElementById("cartBadge");
+  const badge = document.getElementById("cart-badge");
   if (!badge) return;
 
   let total = 0;
@@ -62,9 +62,9 @@ export const updateCartBadge = () => {
 };
 
 export const renderMiniCart = () => {
-  const list = document.getElementById("miniCartList");
-  const sub = document.getElementById("miniCartSubtotal");
-  const total = document.getElementById("miniCartTotal");
+  const list = document.getElementById("mini-cart-list");
+  const sub = document.getElementById("mini-cart-subtotal");
+  const total = document.getElementById("mini-cart-total");
 
   if (!list || !sub || !total) return;
 

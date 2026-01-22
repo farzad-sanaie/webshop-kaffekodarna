@@ -1,7 +1,7 @@
 @use "variables" as var;
 @use "mixins" as m;
 
-.orderStatus {
+.order-status {
   flex-direction: column;
 
   &__text {
@@ -47,7 +47,7 @@
 
 // confirmation animation
 
-.orderStatus__icon {
+.order-status__icon {
   display: flex;
   justify-content: center;
   align-items: center;
