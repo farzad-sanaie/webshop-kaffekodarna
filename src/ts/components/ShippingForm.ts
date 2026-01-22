@@ -50,6 +50,8 @@ export function initShippingForm() {
     if (!input) return;
 
     input.addEventListener("focus", () => {
+      // remove red highlight immediately
+      input.classList.remove("input--error");
       // only type if empty
       if (!input.value) {
         typeText(input, value);
