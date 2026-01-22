@@ -13,6 +13,10 @@ const confirmButton = document.getElementById(
   "confirm-order-btn",
 ) as HTMLButtonElement | null;
 
+const shippingForm = document.getElementById(
+  "shipping-form",
+) as HTMLElement | null;
+
 function typeText(input: HTMLInputElement, text: string, speed = 40) {
   let index = 0;
   input.value = "";
