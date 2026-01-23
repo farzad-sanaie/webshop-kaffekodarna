@@ -6,6 +6,7 @@ import { initFooter } from "./layouts/Footer";
 import { initShippingForm } from "./components/ShippingForm";
 
 import { initPaymentError } from "./services/paymentError";
+import { initConfirmOrderBtn } from "./services/confirmOrderBtn";
 
 if (document.getElementById("checkout-cart")) {
   renderCheckoutPage();
@@ -21,8 +22,9 @@ if (document.getElementById("checkout-cart")) {
   renderCheckoutPage();
 }
 
-// checkout error handling
+// checkout
 document.addEventListener("DOMContentLoaded", () => {
   initShippingForm();
   initPaymentError();
+  initConfirmOrderBtn();
 });
