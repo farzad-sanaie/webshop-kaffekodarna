@@ -1,13 +1,42 @@
-document.addEventListener("DOMContentLoaded", async () => {
-  try {
-    const res = await fetch("/header.html");
-    const html = await res.text();
+import { initCart } from "../cart/cart";
+import { initHamburgerMenu } from "../components/HamburgerMenu";
+import { initShippingForm } from "../components/ShippingForm";
+import { initProductDetails } from "../pages/productDetails";
+import { initProductPage } from "../pages/productPage";
 
-    const header = document.getElementById("header");
-    if (header) {
-      header.innerHTML = html;
+export const initHeader = () => {
+  document.addEventListener("DOMContentLoaded", async () => {
+    try {
+      const res = await fetch("/header.html");
+      const html = await res.text();
+
+      const header = document.getElementById("header");
+      if (header) {
+        header.innerHTML = html;
+        // init cart + mini cart
+        initCart();
+        
+        // menu
+        initHamburgerMenu();
+        
+        // shipping form
+        document.addEventListener("DOMContentLoaded", () => {
+          initShippingForm();
+        });
+        
+        // product page
+        if (document.getElementById("product-page")) {
+          initProductPage();
+        }
+        
+        // product details page
+        if (document.getElementById("details-page")) {
+          initProductDetails();
+        }
+        
+      }
+    } catch (err) {
+      console.error("Header load failed:", err);
     }
-  } catch (err) {
-    console.error("Header load failed:", err);
-  }
-});
+  });
+}

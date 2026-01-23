@@ -1,35 +1,15 @@
 import "../scss/style.scss";
 
-import { initHamburgerMenu } from "./components/HamburgerMenu";
-import { initShippingForm } from "./components/ShippingForm";
-
-import { initProductPage } from "./pages/productPage";
-import { initProductDetails } from "./pages/productDetails";
-
-import { initCart } from "./cart/cart";
 import { renderCheckoutPage } from "./pages/checkoutPage";
+import { initHeader } from "./layouts/Header";
+import { initFooter } from "./layouts/Footer";
 
 if (document.getElementById("checkout-cart")) {
   renderCheckoutPage();
 }
 
-// init cart + mini cart
-initCart();
+// Get Header
+initHeader();
 
-// menu
-initHamburgerMenu();
-
-// shipping form
-document.addEventListener("DOMContentLoaded", () => {
-  initShippingForm();
-});
-
-// product page
-if (document.getElementById("product-page")) {
-  initProductPage();
-}
-
-// product details page
-if (document.getElementById("details-page")) {
-  initProductDetails();
-}
+// Get Footer
+initFooter();
