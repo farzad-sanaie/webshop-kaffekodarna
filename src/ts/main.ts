@@ -21,11 +21,6 @@ initCart();
 // menu
 initHamburgerMenu();
 
-// shipping form
-document.addEventListener("DOMContentLoaded", () => {
-  initShippingForm();
-});
-
 // product page
 if (document.getElementById("product-page")) {
   initProductPage();
@@ -36,7 +31,7 @@ if (document.getElementById("details-page")) {
   initProductDetails();
 }
 
-// payment error handling
+// checkout error handling
 document.addEventListener("DOMContentLoaded", () => {
   initShippingForm();
   initPaymentError();

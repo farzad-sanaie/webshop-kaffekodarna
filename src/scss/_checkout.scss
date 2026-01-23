@@ -172,8 +172,7 @@
   }
 
   input.input--error {
-    border: 1px solid #e63946;
-    box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.3);
+    border: 2px solid #e63946;
   }
 }
 
@@ -255,7 +254,6 @@
 
   &--error {
     border: 2px solid #e63946;
-    box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.3);
   }
 }
 
@@ -310,11 +308,4 @@
       height: var.$s-lg;
     }
   }
-}
-.mini-cart__img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  border-radius: 6px;
-  background: #f5f5f5;
 }
