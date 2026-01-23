@@ -13,6 +13,7 @@ export const initHeader = () => {
       const header = document.getElementById("header");
       if (header) {
         header.innerHTML = html;
+        
         // init cart + mini cart
         initCart();
         
