@@ -225,7 +225,7 @@
           </section>
         </div>
 
-        <aside class="checkout__summary">
+        <aside class="summary checkout__container">
           <h2>Your Sweet Summary</h2>
 
           <div class="summary__row">
@@ -243,13 +243,16 @@
             <span>—</span>
           </div>
 
-          <div class="summary__total">
+          <div class="summary__total flex flex-jc-sb">
             <span>Total</span>
             <span><span id="summary-total">0</span> SEK</span>
           </div>
 
-          <button id="confirm-order-btn" class="summary__btn">
-            CONFIRM MY ORDER →
+          <button
+            id="confirm-order-btn"
+            class="cart-btn cart-btn--secondary summary__btn"
+          >
+            Place Order <img src="img/ArrowRight.svg" alt="Arrow right" />
           </button>
         </aside>
       </section>

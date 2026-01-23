@@ -7,7 +7,7 @@
 
   h2 {
     @include m.text-style-subheading-sm();
-    font-size: var.$fs-body-lg;
+    font-size: var.$fs-xs;
   }
 
   label {
@@ -258,49 +258,45 @@
   }
 }
 
-.checkout__summary {
-  background: #fff;
-  border-radius: 10px;
-  padding: 2rem;
+.summary {
   position: sticky;
   top: 2rem;
 
-  h2 {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-    color: var.$color-primary-teal;
-    text-transform: uppercase;
-    text-align: center;
-  }
-
-  .summary__row {
+  &__row {
     display: flex;
     justify-content: space-between;
-    font-size: 0.75rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: var.$m-md;
+
+    span {
+      @include m.text-style-body;
+      font-size: var.$fs-body-xsm;
+      font-weight: var.$fw-sm;
+      color: var.$color-primary-teal;
+    }
   }
 
-  .summary__total {
-    display: flex;
-    justify-content: space-between;
-    font-weight: 700;
-    padding-top: 1rem;
-    margin-top: 1rem;
-    border-top: 1px solid #ddd;
-    font-size: 0.8rem;
+  &__total {
+    padding-top: var.$p-md;
+    margin-top: var.$m-md;
+    border-top: 2px solid var.$color-primary-teal;
+    @include m.text-style-body();
+    font-size: var.$fs-body-lg;
+    font-weight: var.$fw-sm;
   }
 
-  .summary__btn {
-    margin-top: 2rem;
+  &__btn {
     width: 100%;
-    padding: 1rem;
-    border-radius: 10px;
-    border: none;
-    background: #f06a8b;
-    color: #fff;
-    font-weight: 600;
-    cursor: pointer;
-    font-size: 0.75rem;
+    margin-top: var.$m-lg;
+    @include m.text-style-body-bold();
+    font-size: var.$fs-body-sm;
+
+    &:hover {
+      background-color: var.$color-accent-cherry;
+    }
+
+    img {
+      height: var.$s-lg;
+    }
   }
 }
 .mini-cart__img {
