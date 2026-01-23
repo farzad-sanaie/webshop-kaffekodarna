@@ -1,6 +1,5 @@
 import { initCart } from "../cart/cart";
 import { initHamburgerMenu } from "../components/HamburgerMenu";
-import { initShippingForm } from "../components/ShippingForm";
 import { initProductDetails } from "../pages/productDetails";
 import { initProductPage } from "../pages/productPage";
 
@@ -19,11 +18,6 @@ export const initHeader = () => {
         
         // menu
         initHamburgerMenu();
-        
-        // shipping form
-        document.addEventListener("DOMContentLoaded", () => {
-          initShippingForm();
-        });
         
         // product page
         if (document.getElementById("product-page")) {
