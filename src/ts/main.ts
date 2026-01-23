@@ -9,6 +9,8 @@ import { initProductDetails } from "./pages/productDetails";
 import { initCart } from "./cart/cart";
 import { renderCheckoutPage } from "./pages/checkoutPage";
 
+import { initPaymentError } from "./services/paymentError";
+
 if (document.getElementById("checkout-cart")) {
   renderCheckoutPage();
 }
@@ -33,3 +35,9 @@ if (document.getElementById("product-page")) {
 if (document.getElementById("details-page")) {
   initProductDetails();
 }
+
+// payment error handling
+document.addEventListener("DOMContentLoaded", () => {
+  initShippingForm();
+  initPaymentError();
+});
