@@ -14,16 +14,18 @@ export function initConfirmOrderBtn() {
     if (cart.length === 0) {
       return;
     }
-
+    // stop if shipping has errors
     const shippingErrors = document.querySelectorAll(".input--error");
     if (shippingErrors.length > 0) {
       return;
     }
-
+    // stop if payment has errors
     const paymentSection = document.getElementById("payment-method");
     if (paymentSection?.classList.contains("payment--error")) {
       return;
-    } // PLS WORKKKKKKK
+    }
+
+    // when everything is slay to go we do this
 
     // clear cart
     cart.length = 0;
