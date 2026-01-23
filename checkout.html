@@ -96,7 +96,7 @@
 
       <section class="checkout__layout">
         <div class="checkout__left flex">
-          <section class="cart" id="checkout-cart">
+          <section class="cart checkout__container" id="checkout-cart">
             <div class="cart__header">
               <span class="cart__header-text">Products</span>
               <span class="cart__header-text">Price</span>
@@ -106,7 +106,7 @@
             <!-- JS -->
           </section>
 
-          <section class="shipping-form" id="shipping-form">
+          <section class="shipping-form checkout__container" id="shipping-form">
             <h2>Shipping</h2>
             <form class="flex">
               <div class="shipping-form__row">
@@ -181,41 +181,45 @@
             </form>
           </section>
 
-          <section class="payment">
+          <section class="payment checkout__container" id="payment-method">
             <h2>Payment</h2>
 
             <div class="payment__methods">
-              <label>
-                <input type="radio" name="payment" checked />
-                <img src="/img/payment/swish.svg" alt="Swish" />
-                <span>Swish</span>
-              </label>
-
-              <label>
-                <input type="radio" name="payment" />
-                <img src="/img/payment/venmo.svg" alt="Venmo" />
-                <span>Venmo</span>
-              </label>
-
-              <label>
-                <input type="radio" name="payment" />
-                <img src="/img/payment/paypal.svg" alt="Paypal" />
-                <span>Paypal</span>
-              </label>
-
-              <label>
-                <input type="radio" name="payment" />
-                <img src="/img/payment/amazon.svg" alt="Amazon Pay" />
-                <span>Amazon Pay</span>
-              </label>
-
-              <label>
-                <input type="radio" name="payment" checked />
+              <label class="payment__method">
                 <img
-                  src="/img/payment/creditcard.svg"
-                  alt="Debit / Credit Card"
+                  src="/img/payment/payment-gandalf.svg"
+                  alt="Gandalf Credit"
                 />
-                <span>Debit / Credit Card</span>
+                <div class="payment__method-radio">
+                  <input type="radio" name="payment" value="gandalf" />
+                  <span class="custom-radio"></span>
+                  <span>Gandalf Credit</span>
+                </div>
+              </label>
+
+              <label class="payment__method">
+                <img
+                  src="/img/payment/payment-pennies.svg"
+                  alt="Silver Pennies"
+                />
+                <div class="payment__method-radio">
+                  <input type="radio" name="payment" value="pennies" />
+                  <span class="custom-radio"></span>
+                  <span>Silver Pennies</span>
+                </div>
+              </label>
+
+              <label class="payment__method">
+                <img
+                  src="/img/payment/payment-ring.svg"
+                  alt="The One Ring"
+                  id="the-one-ring"
+                />
+                <div class="payment__method-radio">
+                  <input type="radio" name="payment" value="ring" />
+                  <span class="custom-radio"></span>
+                  <span>The One Ring</span>
+                </div>
               </label>
             </div>
           </section>

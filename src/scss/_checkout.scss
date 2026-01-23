@@ -5,6 +5,24 @@
   display: block;
   text-align: left;
 
+  h2 {
+    @include m.text-style-subheading-sm();
+    font-size: var.$fs-body-lg;
+  }
+
+  label {
+    @include m.text-style-body;
+    font-size: var.$fs-body-xsm;
+    font-weight: var.$fw-sm;
+    color: var.$color-primary-teal;
+  }
+
+  &__container {
+    background: #fff;
+    border-radius: var.$br-card;
+    padding: var.$s-xl;
+  }
+
   &__page-title {
     h1 {
       color: var.$color-accent-cherry;
@@ -30,10 +48,6 @@
 }
 
 .cart {
-  background: #fff;
-  border-radius: var.$br-card;
-  padding: var.$p-lg;
-
   &__header {
     display: grid;
     grid-template-columns: 2.5fr 1fr 1.3fr 1fr auto;
@@ -111,15 +125,7 @@
 }
 
 .shipping-form {
-  background: #fff;
-  border-radius: var.$br-card;
-  padding: var.$s-xl;
   margin: var.$s-xl 0;
-
-  h2 {
-    @include m.text-style-subheading-sm();
-    font-size: var.$fs-body-lg;
-  }
 
   form {
     flex-direction: column;
@@ -132,13 +138,6 @@
     gap: var.$s-sm;
     flex: 1;
     padding-top: var.$p-md;
-
-    label {
-      @include m.text-style-body;
-      font-size: var.$fs-body-xsm;
-      font-weight: var.$fw-sm;
-      color: var.$color-primary-teal;
-    }
 
     input {
       width: 100%;
@@ -179,31 +178,71 @@
 }
 
 .payment {
-  background: #fff;
-  border-radius: 10px;
-  padding: 2rem;
-
-  h2 {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    color: var.$color-primary-teal;
-    text-align: center;
-  }
+  margin: var.$s-xl 0;
 
   &__methods {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var.$s-lg;
     justify-items: center;
-    align-items: center;
+    align-items: start;
+  }
 
-    label {
+  &__method {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var.$p-md;
+    cursor: pointer;
+    transition: transform 0.2s;
+    text-align: center;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    img {
+      height: var.$p-xxl;
+      margin-bottom: var.$m-md;
+    }
+
+    &-radio {
       display: flex;
-      flex-direction: column;
       align-items: center;
-      font-size: 0.75rem;
-      gap: 0.5rem;
-      cursor: pointer;
+      gap: var.$s-sm;
+      position: relative;
+
+      input[type="radio"] {
+        opacity: 0;
+        position: absolute;
+      }
+
+      .custom-radio {
+        width: var.$s-md;
+        height: var.$s-md;
+        border: 2px solid var.$color-primary-teal;
+        border-radius: 50%;
+        position: relative;
+        transition: border-color 0.2s;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: var.$s-sm;
+          height: var.$s-sm;
+          border-radius: 50%;
+          background: var.$color-primary-teal; // checked color
+          opacity: 0;
+          transition: opacity 0.2s;
+        }
+      }
+
+      input[type="radio"]:checked + .custom-radio::after {
+        opacity: 1;
+      }
     }
   }
 }
