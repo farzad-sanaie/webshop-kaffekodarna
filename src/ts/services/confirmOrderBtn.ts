@@ -15,6 +15,16 @@ export function initConfirmOrderBtn() {
       return;
     }
 
+    const shippingErrors = document.querySelectorAll(".input--error");
+    if (shippingErrors.length > 0) {
+      return;
+    }
+
+    const paymentSection = document.getElementById("payment-method");
+    if (paymentSection?.classList.contains("payment--error")) {
+      return;
+    } // PLS WORKKKKKKK
+
     // clear cart
     cart.length = 0;
     saveCart();
