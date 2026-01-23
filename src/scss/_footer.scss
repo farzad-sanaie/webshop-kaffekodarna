@@ -10,13 +10,13 @@
   .container {
     @include m.breakpoint-up(large) {
       display: grid;
-      grid-template-columns: 2fr 1fr 1fr 3fr;
+      grid-template-columns: 1fr 1fr 1fr /* 3fr */;
       grid-template-rows: 1fr auto;
       grid-template-areas:
         "logo links1 links2 cta"
         "social links1 links2 copyright";
       gap: 1rem;
-      justify-items: start;
+      justify-items: center /* start */;
     }
   }
 
@@ -72,7 +72,7 @@
 
     @include m.breakpoint-up(large) {
       justify-content: space-between;
-      align-items: start;
+      align-items: center;
     }
 
     &.col1 {
@@ -120,8 +120,8 @@
 
     @include m.breakpoint-up(large) {
       grid-area: copyright;
-      align-self: end;
-      justify-self: end;
+      //align-self: end;
+      justify-self: center;
     }
   }
 
