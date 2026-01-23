@@ -245,6 +245,18 @@
       }
     }
   }
+
+  &__error {
+    display: none;
+    margin-bottom: var.$m-md;
+    color: #e63946;
+    font-size: var.$fs-body-xsm;
+  }
+
+  &--error {
+    border: 2px solid #e63946;
+    box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.3);
+  }
 }
 
 #the-one-ring {
