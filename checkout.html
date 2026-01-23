@@ -21,7 +21,7 @@
 
   <header class="header">
     <div class="overlay has-fade"></div>
-    <nav class="container container--pall flex flex-jc-sb flex-ai-c hide-for-desktop">
+    <nav class="mobile-nav container container--pall flex flex-jc-sb flex-ai-c hide-for-desktop">
       <a href="index.html" class="header__logo">
         <img src="/img/logo.svg" alt="Candy Aneue 🍭" />
       </a>
@@ -44,6 +44,8 @@
         <a href="product-page.html?category=licorice">Licorice</a>
       </div>
     </nav>
+
+    <!-- Desktop header -->
     <div class="header__desktop hide-for-mobile">
       <div class="header-box container">
         <a href="index.html" class="logo">
@@ -65,20 +67,15 @@
       </div>
 
       <div class="nav__desktop">
-        <ul class="nav-list">
-          <li><a href="product-page.html">All</a></li>
-          <li><a href="product-page.html?isNew=true">New</a></li>
-          <li>
-            <a href="product-page.html?category=lollipops">Lollipops</a>
-          </li>
-          <li>
-            <a href="product-page.html?category=chocolate">Chocolate</a>
-          </li>
-          <li><a href="product-page.html?category=gummies">Gummies</a></li>
-          <li><a href="product-page.html?category=licorice">Licorice</a></li>
-        </ul>
+        <div class="nav-list">
+          <a href="product-page.html">All</a>
+          <a href="product-page.html?isNew=true">New</a>
+          <a href="product-page.html?category=lollipops">Lollipops</a>
+          <a href="product-page.html?category=chocolate">Chocolate</a>
+          <a href="product-page.html?category=gummies">Gummies</a>
+          <a href="product-page.html?category=licorice">Licorice</a>
+        </div>
       </div>
-    </div>
   </header>
 
   <main class="container checkout">
