@@ -82,5 +82,9 @@ export function initShippingForm() {
         input.classList.remove("input--error");
       }
     });
+
+    if (hasErrors) {
+      return;
+    }
   });
 }
