@@ -7,31 +7,30 @@ export const initHeader = () => {
   document.addEventListener("DOMContentLoaded", async () => {
     try {
       const res = await fetch("/header.html");
+
+      if (!res.ok) {
+        throw new Error(`Header not found: ${res.status}`);
+      }
+
       const html = await res.text();
 
       const header = document.getElementById("header");
       if (header) {
         header.innerHTML = html;
-        
-        // init cart + mini cart
+
         initCart();
-        
-        // menu
         initHamburgerMenu();
-        
-        // product page
+
         if (document.getElementById("product-page")) {
           initProductPage();
         }
-        
-        // product details page
+
         if (document.getElementById("details-page")) {
           initProductDetails();
         }
-        
       }
     } catch (err) {
       console.error("Header load failed:", err);
     }
   });
-}
+};
